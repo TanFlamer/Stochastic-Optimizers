@@ -1,0 +1,66 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module bbob_pproc.comp2.ppfig2</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="bbob_pproc.html"><font color="#ffffff">bbob_pproc</font></a>.<a href="bbob_pproc.comp2.html"><font color="#ffffff">comp2</font></a>.ppfig2</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">&nbsp;</font></td></tr></table>
+    <p><tt>Creates&nbsp;ERTs&nbsp;and&nbsp;convergence&nbsp;figures&nbsp;for&nbsp;the&nbsp;comparison&nbsp;of&nbsp;2&nbsp;algorithms.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="bbob_pproc.bootstrap.html">bbob_pproc.bootstrap</a><br>
+<a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+</td><td width="25%" valign=top><a href="bbob_pproc.readalign.html">bbob_pproc.readalign</a><br>
+<a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top><a href="warnings.html">warnings</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-annotate"><strong>annotate</strong></a>(entry0, entry1, dim, minfvalue<font color="#909090">=1e-08</font>, nbtests<font color="#909090">=1</font>)</dt><dd><tt>Display&nbsp;some&nbsp;annotations&nbsp;associated&nbsp;to&nbsp;the&nbsp;graphs&nbsp;generated.</tt></dd></dl>
+ <dl><dt><a name="-beautify"><strong>beautify</strong></a>(xmin<font color="#909090">=None</font>)</dt></dl>
+ <dl><dt><a name="-generateData"><strong>generateData</strong></a>(entry0, entry1, fthresh<font color="#909090">=None</font>)</dt></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>(dsList0, dsList1, minfvalue<font color="#909090">=1e-08</font>, outputdir<font color="#909090">=''</font>, verbose<font color="#909090">=True</font>)</dt><dd><tt>Returns&nbsp;ERT1/ERT0&nbsp;comparison&nbsp;figure.</tt></dd></dl>
+ <dl><dt><a name="-plotERTRatio"><strong>plotERTRatio</strong></a>(data, plotargs<font color="#909090">={}</font>)</dt><dd><tt>Returns&nbsp;handles&nbsp;of&nbsp;line2D&nbsp;plots&nbsp;using&nbsp;input&nbsp;data.<br>
+Input&nbsp;data&nbsp;must&nbsp;be&nbsp;a&nbsp;sequence&nbsp;which&nbsp;first&nbsp;two&nbsp;arguments&nbsp;correspond&nbsp;to<br>
+data&nbsp;of&nbsp;algorithms&nbsp;0&nbsp;and&nbsp;1.&nbsp;The&nbsp;elements&nbsp;of&nbsp;the&nbsp;sequence&nbsp;must&nbsp;be&nbsp;arrays<br>
+which&nbsp;first&nbsp;column&nbsp;is&nbsp;the&nbsp;target&nbsp;function&nbsp;values&nbsp;and&nbsp;the&nbsp;second&nbsp;the&nbsp;<br>
+ERT.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__package__</strong> = None<br>
+<strong>absolute_import</strong> = _Feature((2, 5, 0, 'alpha', 1), (2, 7, 0, 'alpha', 0), 16384)<br>
+<strong>colors</strong> = ('c', 'g', 'b', 'k', 'r', 'm', 'k', 'y', 'k', 'c', 'r', 'm')<br>
+<strong>f</strong> = &lt;closed file './bbob_pproc/comp2/../benchmarkshortinfos.txt', mode 'r' at 0xa0c82a0&gt;<br>
+<strong>figformat</strong> = ('eps', 'pdf')<br>
+<strong>fthresh</strong> = 1e-08<br>
+<strong>funInfos</strong> = {1: '1 Sphere', 2: '2 Ellipsoid separable', 3: '3 Rastrigin separable', 4: '4 Skew Rastrigin-Bueche separable', 5: '5 Linear slope', 6: '6 Attractive sector', 7: '7 Step-ellipsoid', 8: '8 Rosenbrock original', 9: '9 Rosenbrock rotated', 10: '10 Ellipsoid', ...}<br>
+<strong>funcId</strong> = '130'<br>
+<strong>funcInfo</strong> = 'Gallagher Cauchy'<br>
+<strong>incrstars</strong> = 1.5<br>
+<strong>infofile</strong> = './bbob_pproc/comp2/../benchmarkshortinfos.txt'<br>
+<strong>isBenchmarkinfosFound</strong> = True<br>
+<strong>line</strong> = '130 Gallagher Cauchy<font color="#c040c0">\n</font>'<br>
+<strong>linewidth</strong> = 3<br>
+<strong>markers</strong> = ('+', 'v', '*', 'o', 's', 'D', 'x')<br>
+<strong>offset</strong> = 0.0050000000000000001</td></tr></table>
+</body></html>

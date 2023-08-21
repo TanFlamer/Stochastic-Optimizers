@@ -1,0 +1,190 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module bbob_pproc.dataoutput</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="bbob_pproc.html"><font color="#ffffff">bbob_pproc</font></a>.dataoutput</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">&nbsp;</font></td></tr></table>
+    <p><tt>Routines&nbsp;for&nbsp;outputting&nbsp;python-formatted&nbsp;data.<br>
+1&nbsp;file&nbsp;per&nbsp;solver&nbsp;per&nbsp;function&nbsp;and&nbsp;per&nbsp;dimension&nbsp;(unit&nbsp;experiment).</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="getopt.html">getopt</a><br>
+<a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="pickle.html">pickle</a><br>
+<a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top><a href="warnings.html">warnings</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="exceptions.html#Exception">exceptions.Exception</a>(<a href="exceptions.html#BaseException">exceptions.BaseException</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="bbob_pproc.dataoutput.html#Usage">Usage</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Usage">class <strong>Usage</strong></a>(<a href="exceptions.html#Exception">exceptions.Exception</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="bbob_pproc.dataoutput.html#Usage">Usage</a></dd>
+<dd><a href="exceptions.html#Exception">exceptions.Exception</a></dd>
+<dd><a href="exceptions.html#BaseException">exceptions.BaseException</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Usage-__init__"><strong>__init__</strong></a>(self, msg)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object at 0x8226dc0&gt;<dd><tt>T.<a href="#Usage-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;object&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+<hr>
+Methods inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><a name="Usage-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#Usage-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="Usage-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#Usage-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="Usage-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#Usage-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="Usage-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#Usage-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="Usage-__reduce__"><strong>__reduce__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Usage-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#Usage-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="Usage-__setattr__"><strong>__setattr__</strong></a>(...)</dt><dd><tt>x.<a href="#Usage-__setattr__">__setattr__</a>('name',&nbsp;value)&nbsp;&lt;==&gt;&nbsp;x.name&nbsp;=&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="Usage-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Usage-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#Usage-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<dl><dt><a name="Usage-__unicode__"><strong>__unicode__</strong></a>(...)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+<dl><dt><strong>message</strong></dt>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-isListed"><strong>isListed</strong></a>(alg)</dt></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>(argv<font color="#909090">=None</font>)</dt><dd><tt>Generate&nbsp;python-formatted&nbsp;data&nbsp;from&nbsp;raw&nbsp;BBOB&nbsp;experimental&nbsp;data.<br>
+&nbsp;<br>
+The&nbsp;raw&nbsp;experimental&nbsp;data&nbsp;(files&nbsp;with&nbsp;the&nbsp;extension&nbsp;'info'&nbsp;pointing&nbsp;to<br>
+files&nbsp;with&nbsp;extension&nbsp;'dat'&nbsp;and&nbsp;'tdat')&nbsp;are&nbsp;post-processed&nbsp;and&nbsp;stored&nbsp;in&nbsp;a<br>
+more&nbsp;condensed&nbsp;way&nbsp;as&nbsp;files&nbsp;with&nbsp;the&nbsp;extension&nbsp;'pickle'.&nbsp;Supposing&nbsp;the<br>
+raw&nbsp;data&nbsp;are&nbsp;stored&nbsp;in&nbsp;folder&nbsp;'mydata',&nbsp;the&nbsp;new&nbsp;pickle&nbsp;files&nbsp;will&nbsp;be&nbsp;put&nbsp;in<br>
+folder&nbsp;'mydata-pickle'.<br>
+&nbsp;<br>
+Running&nbsp;this&nbsp;will&nbsp;also&nbsp;add&nbsp;an&nbsp;entry&nbsp;in&nbsp;file&nbsp;algorithmshortinfos.txt&nbsp;if&nbsp;it<br>
+does&nbsp;not&nbsp;exist&nbsp;already.<br>
+algorithmshortinfos.txt&nbsp;is&nbsp;a&nbsp;file&nbsp;which&nbsp;contain&nbsp;meta-information&nbsp;that&nbsp;are<br>
+used&nbsp;by&nbsp;modules&nbsp;from&nbsp;the&nbsp;bbob_pproc.compall&nbsp;package.<br>
+The&nbsp;new&nbsp;entry&nbsp;in&nbsp;algorithmshortinfos.txt&nbsp;is&nbsp;represented&nbsp;as&nbsp;a&nbsp;new&nbsp;line<br>
+appended&nbsp;at&nbsp;the&nbsp;end&nbsp;of&nbsp;the&nbsp;file.<br>
+The&nbsp;line&nbsp;in&nbsp;question&nbsp;will&nbsp;have&nbsp;3&nbsp;fields&nbsp;separated&nbsp;by&nbsp;colon&nbsp;(:)&nbsp;character.<br>
+The&nbsp;1st&nbsp;field&nbsp;must&nbsp;be&nbsp;the&nbsp;exact&nbsp;string&nbsp;used&nbsp;as&nbsp;algId&nbsp;in&nbsp;the&nbsp;info&nbsp;files&nbsp;in<br>
+your&nbsp;data,&nbsp;the&nbsp;2nd&nbsp;the&nbsp;exact&nbsp;string&nbsp;for&nbsp;the&nbsp;comment.&nbsp;The&nbsp;3rd&nbsp;will&nbsp;be<br>
+a&nbsp;python&nbsp;dictionary&nbsp;which&nbsp;will&nbsp;be&nbsp;used&nbsp;for&nbsp;the&nbsp;plotting.<br>
+&nbsp;<br>
+Keyword&nbsp;arguments:<br>
+argv&nbsp;--&nbsp;list&nbsp;of&nbsp;strings&nbsp;containing&nbsp;options&nbsp;and&nbsp;arguments.&nbsp;If&nbsp;not&nbsp;provided,<br>
+sys.argv&nbsp;is&nbsp;accessed.<br>
+&nbsp;<br>
+argv&nbsp;should&nbsp;list&nbsp;either&nbsp;names&nbsp;of&nbsp;info&nbsp;files&nbsp;or&nbsp;folders&nbsp;containing&nbsp;info<br>
+files&nbsp;or&nbsp;folders&nbsp;containing&nbsp;pickle&nbsp;files&nbsp;(preferred).<br>
+Furthermore,&nbsp;argv&nbsp;can&nbsp;begin&nbsp;with,&nbsp;in&nbsp;any&nbsp;order,&nbsp;facultative&nbsp;option<br>
+flags&nbsp;listed&nbsp;below.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-h,&nbsp;--help<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display&nbsp;this&nbsp;message<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-v,&nbsp;--verbose<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;verbose&nbsp;mode,&nbsp;prints&nbsp;out&nbsp;operations.&nbsp;When&nbsp;not&nbsp;in&nbsp;verbose&nbsp;mode,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output&nbsp;is&nbsp;to&nbsp;be&nbsp;expected,&nbsp;except&nbsp;for&nbsp;errors.<br>
+&nbsp;<br>
+Exceptions&nbsp;raised:<br>
+<a href="#Usage">Usage</a>&nbsp;--&nbsp;Gives&nbsp;back&nbsp;a&nbsp;usage&nbsp;message.<br>
+&nbsp;<br>
+Examples:<br>
+&nbsp;<br>
+*&nbsp;Calling&nbsp;the&nbsp;dataoutput.py&nbsp;interface&nbsp;from&nbsp;the&nbsp;command&nbsp;line:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;python&nbsp;bbob_pproc/dataoutput.py&nbsp;-v<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;python&nbsp;bbob_pproc/dataoutput.py&nbsp;experiment2/*.info<br>
+&nbsp;<br>
+&nbsp;<br>
+*&nbsp;Loading&nbsp;this&nbsp;package&nbsp;and&nbsp;calling&nbsp;the&nbsp;main&nbsp;from&nbsp;the&nbsp;command&nbsp;line<br>
+&nbsp;&nbsp;(requires&nbsp;that&nbsp;the&nbsp;path&nbsp;to&nbsp;this&nbsp;package&nbsp;is&nbsp;in&nbsp;python&nbsp;search&nbsp;path):<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;python&nbsp;-m&nbsp;bbob_pproc.dataoutput&nbsp;-h<br>
+&nbsp;<br>
+This&nbsp;will&nbsp;print&nbsp;out&nbsp;this&nbsp;help&nbsp;message.<br>
+&nbsp;<br>
+*&nbsp;From&nbsp;the&nbsp;python&nbsp;interactive&nbsp;shell&nbsp;(requires&nbsp;that&nbsp;the&nbsp;path&nbsp;to&nbsp;this<br>
+&nbsp;&nbsp;package&nbsp;is&nbsp;in&nbsp;python&nbsp;search&nbsp;path):<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;from&nbsp;bbob_pproc&nbsp;import&nbsp;dataoutput<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;dataoutput.<a href="#-main">main</a>('folder1')</tt></dd></dl>
+ <dl><dt><a name="-outputPickle"><strong>outputPickle</strong></a>(dsList, verbose<font color="#909090">=True</font>)</dt><dd><tt>Generates&nbsp;pickle&nbsp;files&nbsp;from&nbsp;a&nbsp;DataSetList.</tt></dd></dl>
+ <dl><dt><a name="-updateAlgorithmInfo"><strong>updateAlgorithmInfo</strong></a>(alg, verbose<font color="#909090">=True</font>)</dt><dd><tt>Input&nbsp;one&nbsp;pair&nbsp;of&nbsp;algorithm&nbsp;id&nbsp;and&nbsp;comment&nbsp;and&nbsp;update&nbsp;the&nbsp;text&nbsp;file.</tt></dd></dl>
+ <dl><dt><a name="-usage"><strong>usage</strong></a>()</dt></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__package__</strong> = None<br>
+<strong>absolute_import</strong> = _Feature((2, 5, 0, 'alpha', 1), (2, 7, 0, 'alpha', 0), 16384)<br>
+<strong>algId</strong> = 'bipopes'<br>
+<strong>algPlotInfos</strong> = {('(1+1)-CMA-ES', '% sigma_0=2.0, ccov^-=0, sigma_stop&lt;1e-9'): {'label': '(1+1)-CMA-ES'}, ('(1+1)-active-CMA-ES', '% sigma_0=2.0, ccov^-=0.3/(pow(n, 1.5)+2.0), sigma_stop&lt;1e-9'): {'label': '(1+1)-active-CMA-ES'}, ('ALPS', '% PUT MORE DETAILED INFORMATION, PARAMETER SETTINGS ETC'): {'label': 'ALPS'}, ('AMaLGaM-Full-Free', '% AMaLGaM-Full-Free'): {'color': 'tomato', 'label': 'AMaLGaM IDEA'}, ('BAYEDA', '% Simple continuous BAYEDA with 0.8 selection, p...ion=10*DIM, 2000*DIM fn evals, so 200 generations'): {'color': 'pink', 'label': 'BayEDAcG'}, ('BFGS', '% [-5, 5]^n, max 100 independent restarts.'): {'color': 'r', 'label': 'BFGS'}, ('Cauchy EDA', '% restarts up to 100, outermaxfevals 5e4*dim, inner maxfunevals 5e4*dim'): {'color': 'slategray', 'label': 'Cauchy EDA'}, ('DASA', '% test'): {'color': 'sienna', 'label': 'DASA'}, ('DEPSO', '% MORE DETAILED INFORMATION, PARAMETER SETTINGS ETC'): {'color': 'springgreen', 'label': 'DE-PSO', 'ls': '--'}, ('EDA-PSO', '% All historical information with correlation-triggered adaptive variance scaling.'): {'color': 'springgreen', 'label': 'EDA-PSO'}, ...}<br>
+<strong>comment</strong> = '% bipop without CMA on BBOB-2009, 1e4*N fevals'<br>
+<strong>f</strong> = &lt;closed file './bbob_pproc/compall/algorithmshortinfos.txt', mode 'r' at 0xa0bce80&gt;<br>
+<strong>i</strong> = 80<br>
+<strong>infofile</strong> = './bbob_pproc/compall/algorithmshortinfos.txt'<br>
+<strong>infofilename</strong> = 'algorithmshortinfos.txt'<br>
+<strong>isAlgorithminfosFound</strong> = True<br>
+<strong>line</strong> = 'bipopes:% bipop without CMA on BBOB-2009, 1e4*N ...ls:{"label":"BIPOP-ES", "color":"m", "ls": "--"}<font color="#c040c0">\n</font>'<br>
+<strong>plotinfo</strong> = '{"label":"BIPOP-ES", "color":"m", "ls": "--"}'</td></tr></table>
+</body></html>

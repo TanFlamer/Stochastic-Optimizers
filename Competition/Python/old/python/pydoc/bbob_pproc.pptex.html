@@ -1,0 +1,268 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module bbob_pproc.pptex</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="bbob_pproc.html"><font color="#ffffff">bbob_pproc</font></a>.pptex</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">&nbsp;</font></td></tr></table>
+    <p><tt>Creates&nbsp;tex-file&nbsp;with&nbsp;table&nbsp;entries.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="bbob_pproc.bootstrap.html">bbob_pproc.bootstrap</a><br>
+</td><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="exceptions.html#Exception">exceptions.Exception</a>(<a href="exceptions.html#BaseException">exceptions.BaseException</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="bbob_pproc.pptex.html#Error">Error</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="bbob_pproc.pptex.html#WrongInputSizeError">WrongInputSizeError</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Error">class <strong>Error</strong></a>(<a href="exceptions.html#Exception">exceptions.Exception</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Base&nbsp;class&nbsp;for&nbsp;errors.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="bbob_pproc.pptex.html#Error">Error</a></dd>
+<dd><a href="exceptions.html#Exception">exceptions.Exception</a></dd>
+<dd><a href="exceptions.html#BaseException">exceptions.BaseException</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><a name="Error-__init__"><strong>__init__</strong></a>(...)</dt><dd><tt>x.<a href="#Error-__init__">__init__</a>(...)&nbsp;initializes&nbsp;x;&nbsp;see&nbsp;x.__class__.__doc__&nbsp;for&nbsp;signature</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object at 0x8226dc0&gt;<dd><tt>T.<a href="#Error-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;object&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+<hr>
+Methods inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><a name="Error-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#Error-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="Error-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#Error-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="Error-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#Error-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="Error-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#Error-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="Error-__reduce__"><strong>__reduce__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Error-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#Error-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="Error-__setattr__"><strong>__setattr__</strong></a>(...)</dt><dd><tt>x.<a href="#Error-__setattr__">__setattr__</a>('name',&nbsp;value)&nbsp;&lt;==&gt;&nbsp;x.name&nbsp;=&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="Error-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Error-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#Error-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<dl><dt><a name="Error-__unicode__"><strong>__unicode__</strong></a>(...)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+<dl><dt><strong>message</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="WrongInputSizeError">class <strong>WrongInputSizeError</strong></a>(<a href="bbob_pproc.pptex.html#Error">Error</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Error">Error</a>&nbsp;if&nbsp;an&nbsp;array&nbsp;has&nbsp;the&nbsp;wrong&nbsp;size&nbsp;for&nbsp;the&nbsp;following&nbsp;operation.<br>
+Returns&nbsp;a&nbsp;message&nbsp;containing&nbsp;the&nbsp;size&nbsp;of&nbsp;the&nbsp;array&nbsp;and&nbsp;the&nbsp;required<br>
+size.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="bbob_pproc.pptex.html#WrongInputSizeError">WrongInputSizeError</a></dd>
+<dd><a href="bbob_pproc.pptex.html#Error">Error</a></dd>
+<dd><a href="exceptions.html#Exception">exceptions.Exception</a></dd>
+<dd><a href="exceptions.html#BaseException">exceptions.BaseException</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="WrongInputSizeError-__init__"><strong>__init__</strong></a>(self, arrName, arrSize, reqSize)</dt></dl>
+
+<dl><dt><a name="WrongInputSizeError-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="bbob_pproc.pptex.html#Error">Error</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object at 0x8226dc0&gt;<dd><tt>T.<a href="#WrongInputSizeError-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;object&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+<hr>
+Methods inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><a name="WrongInputSizeError-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#WrongInputSizeError-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="WrongInputSizeError-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#WrongInputSizeError-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="WrongInputSizeError-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#WrongInputSizeError-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="WrongInputSizeError-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#WrongInputSizeError-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="WrongInputSizeError-__reduce__"><strong>__reduce__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="WrongInputSizeError-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#WrongInputSizeError-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="WrongInputSizeError-__setattr__"><strong>__setattr__</strong></a>(...)</dt><dd><tt>x.<a href="#WrongInputSizeError-__setattr__">__setattr__</a>('name',&nbsp;value)&nbsp;&lt;==&gt;&nbsp;x.name&nbsp;=&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="WrongInputSizeError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="WrongInputSizeError-__unicode__"><strong>__unicode__</strong></a>(...)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+<dl><dt><strong>message</strong></dt>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-generateData"><strong>generateData</strong></a>(dataSet, targetFuncValues, samplesize<font color="#909090">=1000</font>)</dt><dd><tt>Returns&nbsp;data&nbsp;for&nbsp;the&nbsp;tables.<br>
+&nbsp;<br>
+Data&nbsp;are&nbsp;supposed&nbsp;to&nbsp;be&nbsp;function-value&nbsp;aligned&nbsp;on&nbsp;some&nbsp;specific&nbsp;function<br>
+values,&nbsp;information&nbsp;on&nbsp;the&nbsp;number&nbsp;of&nbsp;function&nbsp;evaluations&nbsp;to&nbsp;reach&nbsp;the<br>
+target&nbsp;function&nbsp;value&nbsp;complete&nbsp;a&nbsp;row&nbsp;in&nbsp;the&nbsp;resulting&nbsp;array.&nbsp;If&nbsp;some&nbsp;runs<br>
+from&nbsp;dataSet&nbsp;did&nbsp;not&nbsp;reach&nbsp;the&nbsp;target&nbsp;function&nbsp;value,&nbsp;information&nbsp;on&nbsp;the<br>
+final&nbsp;function&nbsp;value&nbsp;reached&nbsp;by&nbsp;these&nbsp;runs&nbsp;will&nbsp;be&nbsp;stored&nbsp;instead.<br>
+&nbsp;<br>
+Keyword&nbsp;arguments:<br>
+dataSet&nbsp;--&nbsp;input&nbsp;DataSet&nbsp;instance.<br>
+targetFuncValues&nbsp;--&nbsp;function&nbsp;values&nbsp;to&nbsp;be&nbsp;displayed<br>
+samplesize&nbsp;--&nbsp;sample&nbsp;size&nbsp;used&nbsp;for&nbsp;the&nbsp;bootstrapping.&nbsp;The&nbsp;larger&nbsp;this&nbsp;value<br>
+is&nbsp;the&nbsp;longer&nbsp;it&nbsp;takes.<br>
+&nbsp;<br>
+Outputs:<br>
+Array&nbsp;of&nbsp;data&nbsp;to&nbsp;be&nbsp;displayed&nbsp;in&nbsp;the&nbsp;tables.</tt></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>(dsList, valOfInterests, filename, isDraft<font color="#909090">=False</font>, verbose<font color="#909090">=True</font>)</dt><dd><tt>Generates&nbsp;latex&nbsp;tabular&nbsp;from&nbsp;a&nbsp;DataSetList.<br>
+&nbsp;<br>
+Keyword&nbsp;arguments:<br>
+dsList&nbsp;--&nbsp;list&nbsp;of&nbsp;DataSet&nbsp;instances&nbsp;to&nbsp;put&nbsp;together&nbsp;in&nbsp;a&nbsp;tabular.<br>
+valOfInterests&nbsp;--&nbsp;list&nbsp;of&nbsp;function&nbsp;values&nbsp;to&nbsp;be&nbsp;displayed.<br>
+filename&nbsp;--&nbsp;output&nbsp;file&nbsp;name.<br>
+isDraft&nbsp;--&nbsp;if&nbsp;true,&nbsp;quickens&nbsp;the&nbsp;bootstrapping&nbsp;step.<br>
+verbose&nbsp;--&nbsp;controls&nbsp;verbosity.</tt></dd></dl>
+ <dl><dt><a name="-tableLaTeX"><strong>tableLaTeX</strong></a>(table, spec, extraeol<font color="#909090">=()</font>)</dt><dd><tt>Generates&nbsp;a&nbsp;latex&nbsp;tabular&nbsp;from&nbsp;a&nbsp;sequence&nbsp;of&nbsp;sequence&nbsp;(table)&nbsp;of&nbsp;strings.<br>
+&nbsp;<br>
+Keyword&nbsp;arguments:<br>
+table&nbsp;--&nbsp;sequence&nbsp;of&nbsp;sequence&nbsp;of&nbsp;strings<br>
+spec&nbsp;--&nbsp;string&nbsp;for&nbsp;table&nbsp;specification,&nbsp;see&nbsp;<a href="http://en.wikibooks.org/wiki/LaTeX/Tables#The_tabular_environment">http://en.wikibooks.org/wiki/LaTeX/Tables#The_tabular_environment</a>&nbsp;<br>
+extraeol&nbsp;--&nbsp;sequence&nbsp;of&nbsp;string&nbsp;the&nbsp;same&nbsp;length&nbsp;as&nbsp;the&nbsp;table&nbsp;(same&nbsp;number&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lines)&nbsp;which&nbsp;are&nbsp;added&nbsp;at&nbsp;the&nbsp;end&nbsp;of&nbsp;each&nbsp;line.</tt></dd></dl>
+ <dl><dt><a name="-tableLaTeXStar"><strong>tableLaTeXStar</strong></a>(table, width, spec, extraeol<font color="#909090">=()</font>)</dt><dd><tt>Generates&nbsp;a&nbsp;latex&nbsp;tabular*&nbsp;from&nbsp;a&nbsp;sequence&nbsp;of&nbsp;sequence&nbsp;(table)&nbsp;of&nbsp;strings<br>
+&nbsp;<br>
+Keyword&nbsp;arguments:<br>
+table&nbsp;--&nbsp;sequence&nbsp;of&nbsp;sequence&nbsp;of&nbsp;strings<br>
+width&nbsp;--&nbsp;string&nbsp;for&nbsp;the&nbsp;width&nbsp;of&nbsp;the&nbsp;table<br>
+spec&nbsp;--&nbsp;string&nbsp;for&nbsp;table&nbsp;specification,&nbsp;see&nbsp;<a href="http://en.wikibooks.org/wiki/LaTeX/Tables#The_tabular_environment">http://en.wikibooks.org/wiki/LaTeX/Tables#The_tabular_environment</a>&nbsp;<br>
+extraeol&nbsp;--&nbsp;sequence&nbsp;of&nbsp;string&nbsp;the&nbsp;same&nbsp;length&nbsp;as&nbsp;the&nbsp;table&nbsp;(same&nbsp;number&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lines)&nbsp;which&nbsp;are&nbsp;added&nbsp;at&nbsp;the&nbsp;end&nbsp;of&nbsp;each&nbsp;line.</tt></dd></dl>
+ <dl><dt><a name="-writeArray"><strong>writeArray</strong></a>(file, vector, format, fontSize, sep<font color="#909090">=' &amp; '</font>, linesep<font color="#909090">='<font color="#c040c0">\\\\</font> <font color="#c040c0">\n</font>'</font>, suppress_entry<font color="#909090">=None</font>)</dt><dd><tt>Writes&nbsp;components&nbsp;of&nbsp;an&nbsp;numeric&nbsp;array&nbsp;in&nbsp;LaTex&nbsp;file&nbsp;with&nbsp;additional<br>
+Tex-formating&nbsp;features.&nbsp;Negative&nbsp;numbers&nbsp;are&nbsp;printed&nbsp;positive&nbsp;but&nbsp;in<br>
+italics.<br>
+&nbsp;<br>
+Inputs:<br>
+file&nbsp;-&nbsp;file&nbsp;in&nbsp;which&nbsp;the&nbsp;output&nbsp;is&nbsp;written&nbsp;to<br>
+vector&nbsp;-&nbsp;1d-array&nbsp;with&nbsp;only&nbsp;numeric&nbsp;entries<br>
+format&nbsp;-&nbsp;format&nbsp;specifier&nbsp;for&nbsp;each&nbsp;column.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;CAVE:&nbsp;numbers&nbsp;are&nbsp;only&nbsp;printed&nbsp;correctly,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;format&nbsp;specifies&nbsp;two&nbsp;numbers&nbsp;of&nbsp;prec.<br>
+fontSize&nbsp;-&nbsp;size&nbsp;of&nbsp;characters&nbsp;in&nbsp;math&nbsp;environment<br>
+&nbsp;<br>
+Optional&nbsp;Inputs:<br>
+sep&nbsp;-&nbsp;string&nbsp;which&nbsp;is&nbsp;written&nbsp;between&nbsp;the&nbsp;numeric&nbsp;elements<br>
+format&nbsp;-&nbsp;format&nbsp;for&nbsp;the&nbsp;numeric&nbsp;values&nbsp;(e.g.&nbsp;'e','f')<br>
+suppress_entry&nbsp;-&nbsp;list&nbsp;of&nbsp;boolean&nbsp;of&nbsp;len&nbsp;of&nbsp;vector,&nbsp;if&nbsp;true<br>
+&nbsp;&nbsp;&nbsp;a&nbsp;'.'&nbsp;is&nbsp;written.&nbsp;Useful&nbsp;to&nbsp;not&nbsp;repeat&nbsp;the&nbsp;same&nbsp;line&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;function&nbsp;values&nbsp;again.</tt></dd></dl>
+ <dl><dt><a name="-writeFEvals"><strong>writeFEvals</strong></a>(fevals, precision<font color="#909090">='.2'</font>)</dt><dd><tt>Returns&nbsp;string&nbsp;representation&nbsp;of&nbsp;a&nbsp;number&nbsp;of&nbsp;function&nbsp;evaluations&nbsp;to&nbsp;use<br>
+in&nbsp;a&nbsp;table.</tt></dd></dl>
+ <dl><dt><a name="-writeFEvals2"><strong>writeFEvals2</strong></a>(fevals, precision<font color="#909090">=2</font>, maxdigits<font color="#909090">=None</font>, isscientific<font color="#909090">=False</font>)</dt><dd><tt>Returns&nbsp;string&nbsp;representation&nbsp;of&nbsp;a&nbsp;number&nbsp;of&nbsp;function&nbsp;evaluations&nbsp;or&nbsp;ERT<br>
+This&nbsp;method&nbsp;is&nbsp;supposed&nbsp;to&nbsp;be&nbsp;used&nbsp;for&nbsp;filling&nbsp;up&nbsp;a&nbsp;LaTeX&nbsp;tabular.<br>
+&nbsp;<br>
+To&nbsp;address&nbsp;the&nbsp;eventual&nbsp;need&nbsp;to&nbsp;keep&nbsp;their&nbsp;string&nbsp;representation&nbsp;short,&nbsp;the<br>
+method&nbsp;here&nbsp;proposes&nbsp;the&nbsp;shortest&nbsp;representation&nbsp;between&nbsp;the&nbsp;full<br>
+representation&nbsp;and&nbsp;a&nbsp;modified&nbsp;scientific&nbsp;representation.<br>
+Examples:<br>
+Number&nbsp;|&nbsp;Precision&nbsp;|&nbsp;Output&nbsp;Representation<br>
+102345&nbsp;&nbsp;|&nbsp;2&nbsp;digits&nbsp;&nbsp;|&nbsp;1.0e5<br>
+&nbsp;<br>
+Keyword&nbsp;arguments:<br>
+fevals&nbsp;--<br>
+precision&nbsp;--&nbsp;number&nbsp;of&nbsp;significant&nbsp;digits</tt></dd></dl>
+ <dl><dt><a name="-writeTable"><strong>writeTable</strong></a>(entries, filename, fontSize<font color="#909090">='scriptsize'</font>, fontSize2<font color="#909090">='scriptstyle'</font>, verbose<font color="#909090">=True</font>)</dt><dd><tt>Writes&nbsp;data&nbsp;of&nbsp;array&nbsp;in&nbsp;a&nbsp;*.tex&nbsp;file.&nbsp;This&nbsp;file&nbsp;then&nbsp;can&nbsp;be&nbsp;used<br>
+in&nbsp;LaTex&nbsp;as&nbsp;input&nbsp;for&nbsp;tables.&nbsp;The&nbsp;input&nbsp;must&nbsp;be&nbsp;placed&nbsp;inside&nbsp;a<br>
+table&nbsp;environment.<br>
+&nbsp;<br>
+Mandatory&nbsp;inputs:<br>
+entries&nbsp;-&nbsp;Sequence&nbsp;of&nbsp;IndexEntry&nbsp;to&nbsp;be&nbsp;displayed.<br>
+filename&nbsp;-&nbsp;name&nbsp;of&nbsp;output&nbsp;file&nbsp;(string)<br>
+&nbsp;<br>
+Optional&nbsp;inputs:<br>
+fontSize&nbsp;-&nbsp;size&nbsp;of&nbsp;fonts&nbsp;as&nbsp;they&nbsp;appear&nbsp;in&nbsp;the&nbsp;LaTex&nbsp;table&nbsp;(string)<br>
+fontSize2&nbsp;-&nbsp;size&nbsp;of&nbsp;the&nbsp;fonts&nbsp;in&nbsp;the&nbsp;math&nbsp;environment&nbsp;(string)</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__package__</strong> = 'bbob_pproc'<br>
+<strong>format</strong> = ['%1.1e', '%d', '%1.1e', '%1.1e', '%1.1e', '%1.1e']<br>
+<strong>header</strong> = [r'$\Delta f$', r'$\#$', r'$\ERT$', r'10\%', r'90\%', r'$\text{RT}_{\text{succ}}$']<br>
+<strong>percentiles</strong> = [10, 90]</td></tr></table>
+</body></html>

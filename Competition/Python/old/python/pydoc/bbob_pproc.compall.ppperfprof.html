@@ -1,0 +1,84 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module bbob_pproc.compall.ppperfprof</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="bbob_pproc.html"><font color="#ffffff">bbob_pproc</font></a>.<a href="bbob_pproc.compall.html"><font color="#ffffff">compall</font></a>.ppperfprof</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">&nbsp;</font></td></tr></table>
+    <p><tt>Generates&nbsp;Empirical&nbsp;Cumulative&nbsp;Distribution&nbsp;of&nbsp;the&nbsp;bootstrap&nbsp;distribution&nbsp;of<br>
+the&nbsp;Expected&nbsp;Running&nbsp;Time&nbsp;(ERT)&nbsp;divided&nbsp;by&nbsp;the&nbsp;dimension.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="bbob_pproc.bootstrap.html">bbob_pproc.bootstrap</a><br>
+<a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+</td><td width="25%" valign=top><a href="warnings.html">warnings</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-beautify"><strong>beautify</strong></a>(figureName<font color="#909090">='perfprofile'</font>, funcsolved<font color="#909090">=None</font>, maxval<font color="#909090">=None</font>, isLegend<font color="#909090">=True</font>, fileFormat<font color="#909090">=('pdf', 'eps')</font>)</dt><dd><tt>Format&nbsp;the&nbsp;figure.</tt></dd></dl>
+ <dl><dt><a name="-get_plot_args"><strong>get_plot_args</strong></a>(args)</dt><dd><tt>args&nbsp;is&nbsp;one&nbsp;dict&nbsp;element&nbsp;according&nbsp;to&nbsp;algorithmshortinfos</tt></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>(dictAlg, target, order<font color="#909090">=None</font>, plotArgs<font color="#909090">={}</font>, outputdir<font color="#909090">=''</font>, info<font color="#909090">='default'</font>, verbose<font color="#909090">=True</font>)</dt><dd><tt>Generates&nbsp;a&nbsp;figure&nbsp;showing&nbsp;the&nbsp;performance&nbsp;of&nbsp;algorithms.<br>
+From&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;DataSetList&nbsp;sorted&nbsp;by&nbsp;algorithms,&nbsp;generates&nbsp;the<br>
+cumulative&nbsp;distribution&nbsp;function&nbsp;of&nbsp;the&nbsp;bootstrap&nbsp;distribution&nbsp;of&nbsp;ERT<br>
+for&nbsp;algorithms&nbsp;on&nbsp;multiple&nbsp;functions&nbsp;for&nbsp;multiple&nbsp;targets&nbsp;altogether.<br>
+Keyword&nbsp;arguments:<br>
+dictAlg&nbsp;--<br>
+target&nbsp;--&nbsp;list&nbsp;of&nbsp;dictionaries&nbsp;with&nbsp;(function,&nbsp;dimension)&nbsp;as&nbsp;keys,&nbsp;target<br>
+function&nbsp;values&nbsp;as&nbsp;values<br>
+order&nbsp;--&nbsp;determines&nbsp;the&nbsp;plotting&nbsp;order&nbsp;of&nbsp;the&nbsp;algorithm&nbsp;(used&nbsp;by&nbsp;the&nbsp;legend<br>
+and&nbsp;in&nbsp;the&nbsp;case&nbsp;the&nbsp;algorithm&nbsp;has&nbsp;no&nbsp;plotting&nbsp;arguments&nbsp;specified).</tt></dd></dl>
+ <dl><dt><a name="-plotLegend"><strong>plotLegend</strong></a>(handles, maxval)</dt><dd><tt>Display&nbsp;right-side&nbsp;legend.</tt></dd></dl>
+ <dl><dt><a name="-plotPerfProf"><strong>plotPerfProf</strong></a>(data, maxval<font color="#909090">=None</font>, maxevals<font color="#909090">=None</font>, isbeautify<font color="#909090">=True</font>, order<font color="#909090">=None</font>, CrE<font color="#909090">=0</font>, kwargs<font color="#909090">={}</font>)</dt><dd><tt>Draw&nbsp;a&nbsp;performance&nbsp;profile.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>EDA</strong> = ('BIPOP-CMA-ES', '(1+1)-CMA-ES', 'VNS (Garcia)', 'EDA-PSO', 'IPOP-SEP-CMA-ES', 'AMaLGaM IDEA', 'iAMaLGaM IDEA', 'Cauchy EDA', 'BayEDAcG', 'MA-LS-Chain', 'Monte Carlo')<br>
+<strong>ESs</strong> = ('BIPOP-CMA-ES', 'IPOP-SEP-CMA-ES', '(1+1)-CMA-ES', '(1+1)-ES', 'BIPOP-ES')<br>
+<strong>GA</strong> = ('DE-PSO', '(1+1)-ES', 'PSO_Bounds', 'DASA', 'G3-PCX', 'simple GA', 'POEMS', 'Monte Carlo')<br>
+<strong>MC</strong> = ('Monte Carlo',)<br>
+<strong>TAO</strong> = ('BFGS', 'NELDER (Han)', 'NEWUOA', 'full NEWUOA', 'BIPOP-CMA-ES', 'IPOP-SEP-CMA-ES', '(1+1)-CMA-ES', '(1+1)-ES', 'simple GA', 'Monte Carlo')<br>
+<strong>TAOp</strong> = ('BFGS', 'NELDER (Han)', 'NEWUOA', 'full NEWUOA', 'BIPOP-CMA-ES', 'IPOP-SEP-CMA-ES', '(1+1)-CMA-ES', '(1+1)-ES', 'simple GA', 'Monte Carlo', 'NELDER (Doe)')<br>
+<strong>__package__</strong> = None<br>
+<strong>absolute_import</strong> = _Feature((2, 5, 0, 'alpha', 1), (2, 7, 0, 'alpha', 0), 16384)<br>
+<strong>best</strong> = ('AMaLGaM IDEA', 'iAMaLGaM IDEA', 'VNS (Garcia)', 'MA-LS-Chain', 'BIPOP-CMA-ES', 'IPOP-SEP-CMA-ES', 'BFGS', 'NELDER (Han)', 'NELDER (Doe)', 'NEWUOA', 'full NEWUOA', 'GLOBAL', 'MCS (Neum)', 'DIRECT', 'DASA', 'POEMS', 'Cauchy EDA', 'Monte Carlo')<br>
+<strong>best2</strong> = ('AMaLGaM IDEA', 'iAMaLGaM IDEA', 'VNS (Garcia)', 'MA-LS-Chain', 'BIPOP-CMA-ES', 'IPOP-SEP-CMA-ES', 'BFGS', 'NEWUOA', 'GLOBAL')<br>
+<strong>bestbest</strong> = ('BIPOP-CMA-ES', 'NEWUOA', 'GLOBAL', 'NELDER (Doe)')<br>
+<strong>bestnoisy</strong> = ()<br>
+<strong>classics</strong> = ('BFGS', 'NELDER (Han)', 'NELDER (Doe)', 'NEWUOA', 'full NEWUOA', 'DIRECT', 'LSfminbnd', 'LSstep', 'Rosenbrock', 'GLOBAL', 'SNOBFIT', 'MCS (Neum)', 'adaptive SPSA', 'Monte Carlo')<br>
+<strong>dpi_global_var</strong> = 100<br>
+<strong>eseda</strong> = ('AMaLGaM IDEA', 'iAMaLGaM IDEA', 'VNS (Garcia)', 'MA-LS-Chain', 'BIPOP-CMA-ES', 'IPOP-SEP-CMA-ES', '(1+1)-CMA-ES', '(1+1)-ES')<br>
+<strong>figformat</strong> = ('eps', 'pdf')<br>
+<strong>fmulti</strong> = [4, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]<br>
+<strong>function_IDs</strong> = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, ...]<br>
+<strong>funi</strong> = [1, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]<br>
+<strong>funilipschitz</strong> = [1, 5, 6, 8, 9, 10, 11, 12, 14]<br>
+<strong>funisep</strong> = [1, 2, 5]<br>
+<strong>nikos</strong> = ('AMaLGaM IDEA', 'VNS (Garcia)', 'MA-LS-Chain', 'BIPOP-CMA-ES', '(1+1)-CMA-ES', '(1+1)-ES', 'IPOP-SEP-CMA-ES', 'BIPOP-ES', 'NEWUOA', 'NELDER (Doe)', 'BFGS', 'Monte Carlo')<br>
+<strong>nikos40D</strong> = ('AMaLGaM IDEA', 'iAMaLGaM IDEA', 'BIPOP-CMA-ES', '(1+1)-CMA-ES', '(1+1)-ES', 'IPOP-SEP-CMA-ES', 'NEWUOA', 'NELDER (Han)', 'BFGS', 'Monte Carlo')<br>
+<strong>perfprofsamplesize</strong> = 100<br>
+<strong>petr</strong> = ('DIRECT', 'LSfminbnd', 'LSstep', 'Rosenbrock', 'G3-PCX', 'Cauchy EDA', 'Monte Carlo')<br>
+<strong>save_zoom</strong> = False<br>
+<strong>show_algorithms</strong> = ()<br>
+<strong>third</strong> = ('POEMS', 'VNS (Garcia)', 'DE-PSO', 'EDA-PSO', 'PSO_Bounds', 'PSO', 'AMaLGaM IDEA', 'iAMaLGaM IDEA', 'MA-LS-Chain', 'DASA', 'BayEDAcG')<br>
+<strong>x_annote_factor</strong> = 90<br>
+<strong>x_limit</strong> = 10000000.0</td></tr></table>
+</body></html>

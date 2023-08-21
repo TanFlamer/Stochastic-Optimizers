@@ -1,0 +1,23 @@
+\begin{thebibliography}{1}
+
+\bibitem{wp200901_2010}
+S.~Finck, N.~Hansen, R.~Ros, and A.~Auger.
+\newblock Real-parameter black-box optimization benchmarking 2009: Presentation
+  of the noiseless functions.
+\newblock Technical Report 2009/20, Research Center PPE, 2009.
+\newblock Updated February 2010.
+
+\bibitem{hansen2010exp}
+N.~Hansen, A.~Auger, S.~Finck, and R.~Ros.
+\newblock Real-parameter black-box optimization benchmarking 2010: Experimental
+  setup.
+\newblock Technical Report RR-7215, INRIA, 2010.
+
+\bibitem{hansen2010fun}
+N.~Hansen, S.~Finck, R.~Ros, and A.~Auger.
+\newblock Real-parameter black-box optimization benchmarking 2009: Noiseless
+  functions definitions.
+\newblock Technical Report RR-6829, INRIA, 2009.
+\newblock Updated February 2010.
+
+\end{thebibliography}

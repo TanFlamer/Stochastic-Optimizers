@@ -1,0 +1,8 @@
+cd C:\Users\zxtan\Documents\Competition\Comparison\results\bottom2
+latex templateBBOBcmp
+bibtex templateBBOBcmp
+latex templateBBOBcmp
+latex templateBBOBcmp
+
+cd C:\Users\zxtan\Documents\Competition\Comparison\data
+C:\Users\zxtan\Documents\Competition\Python\bbob.v10.2\python\bbob_pproc\runcomp2.py GA PSO

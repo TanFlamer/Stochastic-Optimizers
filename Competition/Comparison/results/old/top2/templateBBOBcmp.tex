@@ -1,0 +1,459 @@
+% This is based on "sig-alternate.tex" V1.9 April 2009
+% This file should be compiled with V2.4 of "sig-alternate.cls" April 2009
+%
+% ----------------------------------------------------------------------------------------------------------------
+%
+% This .tex source is an example which *does* use
+% the .bib file (from which the .bbl file % is produced).
+% REMEMBER HOWEVER: After having produced the .bbl file,
+% and prior to final submission, you *NEED* to 'insert'
+% your .bbl file into your source .tex file so as to provide
+% ONE 'self-contained' source file.
+%
+% Information on the sig-alternate class file and on the
+% GECCO workshop paper format and submission can be found at these
+% locations:
+% http://www.acm.org/sigs/publications/proceedings-templates#aL2
+% http://www.sheridanprinting.com/typedept/gecco3.htm
+%
+% ================= IF YOU HAVE QUESTIONS =======================
+% Questions regarding the SIGS styles, SIGS policies and
+% procedures, Conferences etc. should be sent to
+% Adrienne Griscti (griscti@acm.org)
+%
+% Technical questions to bbob@lri.fr
+% ===============================================================
+%
+
+\documentclass{sig-alternate}
+\pdfpagewidth=8.5in
+\pdfpageheight=11in
+\special{papersize=8.5in,11in}
+    \renewcommand{\topfraction}{1}	% max fraction of floats at top
+    \renewcommand{\bottomfraction}{1} % max fraction of floats at bottom
+    %   Parameters for TEXT pages (not float pages):
+    \setcounter{topnumber}{3}
+    \setcounter{bottomnumber}{3}
+    \setcounter{totalnumber}{3}     % 2 may work better
+    \setcounter{dbltopnumber}{4}    % for 2-column pages
+    \renewcommand{\dbltopfraction}{1}	% fit big float above 2-col. text
+    \renewcommand{\textfraction}{0.0}	% allow minimal text w. figs
+    %   Parameters for FLOAT pages (not text pages):
+    \renewcommand{\floatpagefraction}{0.80}	% require fuller float pages
+    % N.B.: floatpagefraction MUST be less than topfraction !!
+    \renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Packages
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{rotating}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Definitions
+
+% location of pictures files
+\newcommand{\bbobdatapath}{cmp2data/}
+\graphicspath{{\bbobdatapath}}
+
+% pre-defined commands
+\newcommand{\DIM}{\ensuremath{\mathrm{DIM}}}
+\newcommand{\ERT}{\ensuremath{\mathrm{ERT}}}
+\newcommand{\FEvals}{\ensuremath{\mathrm{FEvals}}}
+\newcommand{\nruns}{\ensuremath{\mathrm{Nruns}}}
+\newcommand{\Dfb}{\ensuremath{\Delta f_{\mathrm{best}}}}
+\newcommand{\Df}{\ensuremath{\Delta f}}
+\newcommand{\nbFEs}{\ensuremath{\mathrm{\#FEs}}}
+\newcommand{\fopt}{\ensuremath{f_\mathrm{opt}}}
+\newcommand{\ftarget}{\ensuremath{f_\mathrm{t}}}
+\newcommand{\CrE}{\ensuremath{\mathrm{CrE}}}
+
+% specify acronyms for algorithm_0 (1st arg. of post-processing) and algorithm_1 (2nd arg.) 
+% acronyms should be shorter than 10 characters
+\newcommand{\algzero}{ALG0-acronym}  % first argument in the post-processing
+\newcommand{\algone}{ALG1-acronym}   % second argument in the post-processing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%
+% --- Author Metadata here ---
+\conferenceinfo{GECCO'10,} {July 7--11, 2010, Portland, Oregon, USA.}
+\CopyrightYear{2010}
+\crdata{978-1-4503-0073-5/10/07}
+\clubpenalty=10000
+\widowpenalty = 10000
+% --- End of Author Metadata ---
+
+\title{Black-Box Optimization Benchmarking Template for the Comparison of Two Algorithms on the Noiseless Testbed}
+\subtitle{Draft version
+\titlenote{Submission deadline: March 25th.}}
+%Camera-ready paper due April 13th.}}
+
+%
+% You need the command \numberofauthors to handle the 'placement
+% and alignment' of the authors beneath the title.
+%
+% For aesthetic reasons, we recommend 'three authors at a time'
+% i.e. three 'name/affiliation blocks' be placed beneath the title.
+%
+% NOTE: You are NOT restricted in how many 'rows' of
+% "name/affiliations" may appear. We just ask that you restrict
+% the number of 'columns' to three.
+%
+% Because of the available 'opening page real-estate'
+% we ask you to refrain from putting more than six authors
+% (two rows with three columns) beneath the article title.
+% More than six makes the first-page appear very cluttered indeed.
+%
+% Use the \alignauthor commands to handle the names
+% and affiliations for an 'aesthetic maximum' of six authors.
+% Add names, affiliations, addresses for
+% the seventh etc. author(s) as the argument for the
+% \additionalauthors command.
+% These 'additional authors' will be output/set for you
+% without further effort on your part as the last section in
+% the body of your article BEFORE References or any Appendices.
+
+\numberofauthors{1} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+\alignauthor
+Forename Name\\ %\titlenote{Dr.~Trovato insisted his name be first.}\\
+%       \affaddr{Institute for Clarity in Documentation}\\
+%       \affaddr{1932 Wallamaloo Lane}\\
+%       \affaddr{Wallamaloo, New Zealand}\\
+%       \email{trovato@corporation.com}
+%% 2nd. author
+%\alignauthor
+%G.K.M. Tobin\titlenote{The secretary disavows
+%any knowledge of this author's actions.}\\
+%       \affaddr{Institute for Clarity in Documentation}\\
+%       \affaddr{P.O. Box 1212}\\
+%       \affaddr{Dublin, Ohio 43017-6221}\\
+%       \email{webmaster@marysville-ohio.com}
+%% 3rd. author
+%\alignauthor Lars Th{\o}rv{\"a}ld\titlenote{This author is the
+%one who did all the really hard work.}\\
+%       \affaddr{The Th{\o}rv{\"a}ld Group}\\
+%       \affaddr{1 Th{\o}rv{\"a}ld Circle}\\
+%       \affaddr{Hekla, Iceland}\\
+%       \email{larst@affiliation.org}
+%\and  % use '\and' if you need 'another row' of author names
+%% 4th. author
+%\alignauthor Lawrence P. Leipuner\\
+%       \affaddr{Brookhaven Laboratories}\\
+%       \affaddr{Brookhaven National Lab}\\
+%       \affaddr{P.O. Box 5000}\\
+%       \email{lleipuner@researchlabs.org}
+%% 5th. author
+%\alignauthor Sean Fogarty\\
+%       \affaddr{NASA Ames Research Center}\\
+%       \affaddr{Moffett Field}\\
+%       \affaddr{California 94035}\\
+%       \email{fogartys@amesres.org}
+%% 6th. author
+%\alignauthor Charles Palmer\\
+%       \affaddr{Palmer Research Laboratories}\\
+%       \affaddr{8600 Datapoint Drive}\\
+%       \affaddr{San Antonio, Texas 78229}\\
+%       \email{cpalmer@prl.com}
+} % author
+%% There's nothing stopping you putting the seventh, eighth, etc.
+%% author on the opening page (as the 'third row') but we ask,
+%% for aesthetic reasons that you place these 'additional authors'
+%% in the \additional authors block, viz.
+%\additionalauthors{Additional authors: John Smith (The Th{\o}rv{\"a}ld Group,
+%email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
+%(The Kumquat Consortium, email: {\texttt{jpkumquat@consortium.net}}).}
+%\date{30 July 1999}
+%% Just remember to make sure that the TOTAL number of authors
+%% is the number that will appear on the first page PLUS the
+%% number that will appear in the \additionalauthors section.
+
+\maketitle
+\begin{abstract}
+\end{abstract}
+
+% Add any ACM category that you feel is needed
+\category{G.1.6}{Numerical Analysis}{Optimization}[global optimization,
+unconstrained optimization]
+\category{F.2.1}{Analysis of Algorithms and Problem Complexity}{Numerical Algorithms and Problems}
+
+% Complete with anything that is needed
+\terms{Algorithms}
+
+% Complete with anything that is needed
+\keywords{Benchmarking, Black-box optimization}
+
+% \section{Introduction}
+%
+% \section{Algorithm Presentation}
+%
+% \section{Experimental Procedure}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Results from experiments according to \cite{hansen2010exp} on the benchmark
+functions given in \cite{wp200901_2010,hansen2010fun} are presented in
+Figures~\ref{fig:ERTratiographs}, \ref{fig:scatterplots} and \ref{fig:RLDs} and
+in Table~\ref{tab:ERTs}. The \textbf{expected running time (ERT)}, used in the figures and table, depends on a
+given target function value, $\ftarget=\fopt+\Df$, and is computed over all relevant trials
+as the number of function evaluations executed during each trial while the best
+function value did not reach \ftarget, summed over all trials
+and divided by the number of trials that actually reached \ftarget\
+\cite{hansen2010exp,price1997dev}. 
+\textbf{Statistical significance} is tested with the rank-sum test for a given
+target $\Delta\ftarget$ ($10^{-8}$ in Figure~\ref{fig:ERTratiographs}) using,
+for each trial, either the number of needed function evaluations to reach
+$\Delta\ftarget$ (inverted and multiplied by $-1$), or, if the target was not
+reached, the best $\Df$-value achieved, measured only up to the smallest number
+of overall function evaluations for any unsuccessful trial under consideration. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}
+\centering
+\begin{tabular}{@{}c@{}c@{}c@{}c@{}}
+\includegraphics[width=0.253\textwidth, trim= 0.7cm 0.8cm 0.5cm 0.5cm, clip]{ppcmpfig_f1}&
+\includegraphics[width=0.238\textwidth, trim= 1.8cm 0.8cm 0.5cm 0.5cm, clip]{ppcmpfig_f2}&
+\includegraphics[width=0.238\textwidth, trim= 1.8cm 0.8cm 0.5cm 0.5cm, clip]{ppcmpfig_f3}&
+\includegraphics[width=0.238\textwidth, trim= 1.8cm 0.8cm 0.5cm 0.5cm, clip]{ppcmpfig_f4}\\
+\includegraphics[width=0.253\textwidth, trim= 0.7cm 0.8cm 0.5cm 0.5cm, clip]{ppcmpfig_f5}&
+\includegraphics[width=0.238\textwidth, trim= 1.8cm 0.8cm 0.5cm 0.5cm, clip]{ppcmpfig_f6}&
+\includegraphics[width=0.238\textwidth, trim= 1.8cm 0.8cm 0.5cm 0.5cm, clip]{ppcmpfig_f7}&
+\includegraphics[width=0.238\textwidth, trim= 1.8cm 0.8cm 0.5cm 0.5cm, clip]{ppcmpfig_f8}\\
+\includegraphics[width=0.253\textwidth, trim= 0.7cm 0.8cm 0.5cm 0.5cm, clip]{ppcmpfig_f9}&
+\includegraphics[width=0.238\textwidth, trim= 1.8cm 0.8cm 0.5cm 0.5cm, clip]{ppcmpfig_f10}&
+\includegraphics[width=0.238\textwidth, trim= 1.8cm 0.8cm 0.5cm 0.5cm, clip]{ppcmpfig_f11}&
+\includegraphics[width=0.238\textwidth, trim= 1.8cm 0.8cm 0.5cm 0.5cm, clip]{ppcmpfig_f12}\\
+\includegraphics[width=0.253\textwidth, trim= 0.7cm 0.8cm 0.5cm 0.5cm, clip]{ppcmpfig_f13}&
+\includegraphics[width=0.238\textwidth, trim= 1.8cm 0.8cm 0.5cm 0.5cm, clip]{ppcmpfig_f14}&
+\includegraphics[width=0.238\textwidth, trim= 1.8cm 0.8cm 0.5cm 0.5cm, clip]{ppcmpfig_f15}&
+\includegraphics[width=0.238\textwidth, trim= 1.8cm 0.8cm 0.5cm 0.5cm, clip]{ppcmpfig_f16}\\
+\includegraphics[width=0.253\textwidth, trim= 0.7cm 0.8cm 0.5cm 0.5cm, clip]{ppcmpfig_f17}&
+\includegraphics[width=0.238\textwidth, trim= 1.8cm 0.8cm 0.5cm 0.5cm, clip]{ppcmpfig_f18}&
+\includegraphics[width=0.238\textwidth, trim= 1.8cm 0.8cm 0.5cm 0.5cm, clip]{ppcmpfig_f19}&
+\includegraphics[width=0.238\textwidth, trim= 1.8cm 0.8cm 0.5cm 0.5cm, clip]{ppcmpfig_f20}\\
+\includegraphics[width=0.253\textwidth, trim= 0.7cm 0.0cm 0.5cm 0.5cm, clip]{ppcmpfig_f21}&
+\includegraphics[width=0.238\textwidth, trim= 1.8cm 0.0cm 0.5cm 0.5cm, clip]{ppcmpfig_f22}&
+\includegraphics[width=0.238\textwidth, trim= 1.8cm 0.0cm 0.5cm 0.5cm, clip]{ppcmpfig_f23}&
+\includegraphics[width=0.238\textwidth, trim= 1.8cm 0.0cm 0.5cm 0.5cm, clip]{ppcmpfig_f24}
+\end{tabular}
+\vspace*{-0.2cm}
+\caption{\label{fig:ERTratiographs}
+ERT ratio % Ratio of the expected running times (ERT) 
+of \algone\ divided by \algzero\ versus $\log_{10}(\Df)$ for
+$f_1$--$f_{24}$ in
+  {\color{cyan}2},
+  {\color{green!45!black}3},
+  {\color{blue}5}, 
+  {\color{black}10}, 
+  {\color{red}20}, 
+  {\color{magenta}40}-D.
+% cyan:2, green:3, blue:5, black:10, red:20, purple:40. 
+Ratios $<10^0$ indicate an advantage of \algone, smaller
+values are always better. The line gets dashed when for any algorithm the ERT exceeds thrice the median
+of the trial-wise overall number of $f$-evaluations for the same algorithm on this function.
+Symbols indicate the best achieved $\Df$-value of one algorithm (ERT gets undefined to the right). The dashed line
+continues as the fraction of successful trials of the other
+algorithm, where 0 means 0\% and the y-axis limits mean 100\%, values below
+zero for \algone. The line ends when no algorithm reaches $\Df$ anymore. 
+The number of successful trials is given, only if it was in $\{1\dots9\}$ for
+\algone\ (1st number) and non-zero for \algzero\ (2nd number). 
+Results are significant with $p=0.05$ for one star and $p=10^{-\#\star}$
+otherwise, with Bonferroni correction within each figure.}
+% 
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}
+\begin{tabular}{*{4}{@{}c@{}}}
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf 1 Sphere\hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f1}&
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf 2 Ellipsoid separable\hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f2}&
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf 3 Rastrigin separable\hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f3}&
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf 4 Skew Rastrigin-Bueche\hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f4}\\[-2.2ex]
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf5 Linear slope \hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f5}&
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf6 Attractive sector \hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f6}&
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf7 Step-ellipsoid \hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f7}&
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf8 Rosenbrock original \hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f8}\\[-2.2ex]
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf9 Rosenbrock rotated \hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f9}&
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf10 Ellipsoid \hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f10}&
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf11 Discus \hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f11}&
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf12 Bent cigar \hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f12}\\[-2.2ex]
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf13 Sharp ridge \hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f13}&
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf~~14 Sum of diff.\ powers \hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f14}&
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf15 Rastrigin \hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f15}&
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf16 Weierstrass \hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f16}\\[-2.2ex]
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf17 Schaffer F7, cond.10 \hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f17}&
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf18 Schaffer F7, cond.1000 \hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f18}&
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf19 Griewank-Rosenbrock \hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f19}&
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf20 Schwefel x*sin(x) \hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f20}\\[-2.2ex]
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf21 Gallagher 101 peaks \hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f21}&
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf22 Gallagher 21 peaks \hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f22}&
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf23 Katsuuras \hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f23}&
+\begin{turn}{90}\parbox{0.21\textwidth}{\hfill\sf24 Lunacek bi-Rastrigin \hfill~}\end{turn} 
+    \includegraphics[height=0.21\textwidth, trim= 34mm 0mm 20mm 9mm, clip]{scatter_f24}
+\end{tabular}
+\caption{\label{fig:scatterplots}Expected running time (ERT in
+ log10 of number of function evaluations) of \algone\ versus \algzero\ for 46
+ target values $\Df \in [10^{-8}, 10]$ in each dimension for functions
+ $f_1$--$f_{24}$. Markers on the upper or right egde indicate that the target
+ value was never reached by \algone\ or \algzero\ respectively. Markers 
+ represent dimension: 
+  2:{\color{cyan}+},
+  3:{\color{green!45!black}$\triangledown$},
+  5:{\color{blue}$\star$}, 
+ 10:$\circ$, 
+ 20:{\color{red}$\Box$}, 
+ 40:{\color{magenta}$\Diamond$}. }
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\rot}[2][2.5]{
+  \hspace*{-3.5\baselineskip}%
+  \begin{rotate}{90}\hspace{#1em}#2
+  \end{rotate}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}
+ \begin{tabular}{l@{\hspace*{-0.025\textwidth}}l|l@{\hspace*{-0.025\textwidth}}l}
+ \multicolumn{2}{c}{5-D} & \multicolumn{2}{c}{20-D} \\
+ \rot{all functions}
+ \includegraphics[width=0.268\textwidth]{pprldistr2_dim05noiselessall} & 
+ \includegraphics[width=0.2375\textwidth,trim=2.3cm 0mm 0mm 0mm, clip]{pplogabs_dim05noiselessall} &
+ \includegraphics[width=0.268\textwidth]{pprldistr2_dim20noiselessall} &
+ \includegraphics[width=0.2375\textwidth,trim=2.3cm 0mm 0mm 0mm, clip]{pplogabs_dim20noiselessall} \\
+ \rot{separable fcts}
+ \includegraphics[width=0.268\textwidth,trim=     0mm 0mm 0mm 15mm, clip]{pprldistr2_dim05separ} & 
+ \includegraphics[width=0.2375\textwidth,trim=2.3cm 0mm 0mm 15mm, clip]{pplogabs_dim05separ} &
+ \includegraphics[width=0.268\textwidth,trim=     0mm 0mm 0mm 15mm, clip]{pprldistr2_dim20separ} &
+ \includegraphics[width=0.2375\textwidth,trim=2.3cm 0mm 0mm 15mm, clip]{pplogabs_dim20separ} \\
+ \rot[2]{moderate fcts}
+ \includegraphics[width=0.268\textwidth,trim=     0mm 0mm 0mm 15mm, clip]{pprldistr2_dim05lcond} & 
+ \includegraphics[width=0.2375\textwidth,trim=2.3cm 0mm 0mm 15mm, clip]{pplogabs_dim05lcond} &
+ \includegraphics[width=0.268\textwidth,trim=     0mm 0mm 0mm 15mm, clip]{pprldistr2_dim20lcond} & 
+ \includegraphics[width=0.2375\textwidth,trim=2.3cm 0mm 0mm 15mm, clip]{pplogabs_dim20lcond}\\
+ \rot[1.3]{ill-conditioned fcts}
+ \includegraphics[width=0.268\textwidth,trim=     0mm 0mm 0mm 15mm, clip]{pprldistr2_dim05hcond} & 
+ \includegraphics[width=0.2375\textwidth,trim=2.3cm 0mm 0mm 15mm, clip]{pplogabs_dim05hcond} &
+ \includegraphics[width=0.268\textwidth,trim=     0mm 0mm 0mm 15mm, clip]{pprldistr2_dim20hcond} &
+ \includegraphics[width=0.2375\textwidth,trim=2.3cm 0mm 0mm 15mm, clip]{pplogabs_dim20hcond} \\
+ \rot[1.6]{multi-modal fcts}
+ \includegraphics[width=0.268\textwidth,trim=     0mm 0mm 0mm 15mm, clip]{pprldistr2_dim05multi} & 
+ \includegraphics[width=0.2375\textwidth,trim=2.3cm 0mm 0mm 15mm, clip]{pplogabs_dim05multi} &
+ \includegraphics[width=0.268\textwidth,trim=     0mm 0mm 0mm 15mm, clip]{pprldistr2_dim20multi} &
+ \includegraphics[width=0.2375\textwidth,trim=2.3cm 0mm 0mm 15mm, clip]{pplogabs_dim20multi} \\
+ \rot[1.0]{weak structure fcts}
+ \includegraphics[width=0.268\textwidth,trim=     0mm 0mm 0mm 15mm, clip]{pprldistr2_dim05mult2} & 
+ \includegraphics[width=0.2375\textwidth,trim=2.3cm 0mm 0mm 15mm, clip]{pplogabs_dim05mult2} &
+ \includegraphics[width=0.268\textwidth,trim=     0mm 0mm 0mm 15mm, clip]{pprldistr2_dim20mult2} & 
+ \includegraphics[width=0.2375\textwidth,trim=2.3cm 0mm 0mm 15mm, clip]{pplogabs_dim20mult2}
+ \end{tabular}
+\vspace*{-0.2cm}
+ \caption{\label{fig:RLDs}Empirical cumulative distributions (ECDF) 
+ of run lengths and speed-up ratios in 5-D (left) and 20-D (right). 
+ Left sub-columns: ECDF of
+ the number of function evaluations divided by dimension $D$
+ (FEvals/D) to reach a target value $\fopt+\Df$ with $\Df=10^{k}$, where
+ $k\in\{1, -1, -4, -8\}$ is given by the first value in the legend, for
+ \algone\ (solid) and \algzero\ (dashed). Light beige lines show the ECDF of
+ FEvals for target value $\Df=10^{-8}$ of algorithms benchmarked during
+ BBOB-2009. 
+ Right sub-columns: ECDF of FEval ratios of \algone\ divided by \algzero, all
+ trial pairs for each function. Pairs where both trials failed are disregarded,
+ pairs where one trial failed are visible in the limits being $>0$ or $<1$. The
+ legends indicate the number of functions that were solved in at least one trial
+ (\algone\ first).}
+\end{figure*}
+% \end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table*}
+\centering
+\hfill5-D\hfill20-D\hfill~\\[1ex]
+\tiny
+\input{\bbobdatapath cmptable_05D_noiselessall}
+\input{\bbobdatapath cmptable_20D_noiselessall}
+\caption{\label{tab:ERTs}
+Expected running time (ERT in number of function evaluations)
+divided by the best ERT measured during BBOB-2009 (given in the respective
+first row) for different $\Df$ values for functions
+$f_1$--$f_{24}$.
+The median number of conducted function evaluations is additionally given in 
+\textit{italics}, if $\ERT(10^{-7}) =\infty$.
+%
+\#succ is the number of trials that reached the final target $\fopt + 10^{-8}$.
+0:\:\algzeroshort\ is \algzero\ and 1:\:\algoneshort\ is \algone. 
+%
+Bold entries are statistically significantly better compared 
+to the other algorithm, with $p=0.05$ or $p=10^{-k}$ where $k>1$ is the number 
+following the $\star$ symbol, with Bonferroni
+correction of 48. 
+}
+% command definition of \algxxxshort ends here
+\end{table*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% The following two commands are all you need in the
+% initial runs of your .tex file to
+% produce the bibliography for the citations in your paper.
+\bibliographystyle{abbrv}
+\bibliography{bbob}  % bbob.bib is the name of the Bibliography in this case
+% You must have a proper ".bib" file
+%  and remember to run:
+% latex bibtex latex latex
+% to resolve all references
+% to create the ~.bbl file.  Insert that ~.bbl file into
+% the .tex source file and comment out
+% the command \texttt{{\char'134}thebibliography}.
+%
+% ACM needs 'a single self-contained file'!
+%
+
+% \clearpage % otherwise the last figure might be missing
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

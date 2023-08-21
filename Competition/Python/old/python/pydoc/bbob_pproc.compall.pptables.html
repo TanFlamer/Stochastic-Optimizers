@@ -1,0 +1,60 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module bbob_pproc.compall.pptables</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="bbob_pproc.html"><font color="#ffffff">bbob_pproc</font></a>.<a href="bbob_pproc.compall.html"><font color="#ffffff">compall</font></a>.pptables</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">&nbsp;</font></td></tr></table>
+    <p><tt>Routines&nbsp;for&nbsp;the&nbsp;generation&nbsp;of&nbsp;TeX&nbsp;tables.<br>
+See&nbsp;Section&nbsp;Comparison&nbsp;Tables&nbsp;in<br>
+<a href="http://tao.lri.fr/tiki-index.php?page=BBOC+Data+presentation">http://tao.lri.fr/tiki-index.php?page=BBOC+Data+presentation</a></tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-cite"><strong>cite</strong></a>(algName, isNoisefree, isNoisy)</dt><dd><tt>Returns&nbsp;the&nbsp;citation&nbsp;key&nbsp;associated&nbsp;to&nbsp;the&nbsp;algorithm&nbsp;name.<br>
+Hard&nbsp;coded&nbsp;while&nbsp;no&nbsp;other&nbsp;solution&nbsp;is&nbsp;found.</tt></dd></dl>
+ <dl><dt><a name="-onealg"><strong>onealg</strong></a>(dsList, allmintarget, allertbest)</dt><dd><tt>Helper&nbsp;routine&nbsp;for&nbsp;the&nbsp;generation&nbsp;of&nbsp;a&nbsp;table&nbsp;for&nbsp;one&nbsp;algorithm.</tt></dd></dl>
+ <dl><dt><a name="-sortColumns"><strong>sortColumns</strong></a>(table, maxRank<font color="#909090">=None</font>)</dt><dd><tt>For&nbsp;each&nbsp;column&nbsp;in&nbsp;table,&nbsp;returns&nbsp;a&nbsp;list&nbsp;of&nbsp;the&nbsp;maxRank-ranked&nbsp;elements.<br>
+This&nbsp;list&nbsp;may&nbsp;have&nbsp;a&nbsp;length&nbsp;larger&nbsp;than&nbsp;maxRank&nbsp;in&nbsp;the&nbsp;case&nbsp;of&nbsp;ties.</tt></dd></dl>
+ <dl><dt><a name="-tablemanyalg"><strong>tablemanyalg</strong></a>(dsList, allmintarget, allertbest, sortedAlgs<font color="#909090">=None</font>, outputdir<font color="#909090">='.'</font>)</dt><dd><tt>Generate&nbsp;a&nbsp;table&nbsp;with&nbsp;the&nbsp;figures&nbsp;of&nbsp;multiple&nbsp;algorithms.</tt></dd></dl>
+ <dl><dt><a name="-tablemanyalgonefunc"><strong>tablemanyalgonefunc</strong></a>(dictAlg, allmintarget, allertbest, sortedAlgs<font color="#909090">=None</font>, outputdir<font color="#909090">='.'</font>)</dt><dd><tt>Generate&nbsp;one&nbsp;table&nbsp;per&nbsp;function&nbsp;showing&nbsp;results&nbsp;of&nbsp;multiple&nbsp;algorithms.</tt></dd></dl>
+ <dl><dt><a name="-tableonealg"><strong>tableonealg</strong></a>(dsList, allmintarget, allertbest, sortedAlgs<font color="#909090">=None</font>, outputdir<font color="#909090">='.'</font>)</dt><dd><tt>Routine&nbsp;for&nbsp;the&nbsp;generation&nbsp;of&nbsp;a&nbsp;table&nbsp;for&nbsp;an&nbsp;algorithm.</tt></dd></dl>
+ <dl><dt><a name="-writeFunVal"><strong>writeFunVal</strong></a>(funval)</dt><dd><tt>Returns&nbsp;string&nbsp;representation&nbsp;of&nbsp;a&nbsp;function&nbsp;value&nbsp;to&nbsp;use&nbsp;in&nbsp;a&nbsp;table.</tt></dd></dl>
+ <dl><dt><a name="-writeLabels"><strong>writeLabels</strong></a>(label)</dt><dd><tt>Format&nbsp;text&nbsp;to&nbsp;be&nbsp;output&nbsp;by&nbsp;LaTeX.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__package__</strong> = None<br>
+<strong>absolute_import</strong> = _Feature((2, 5, 0, 'alpha', 1), (2, 7, 0, 'alpha', 0), 16384)<br>
+<strong>algPlotInfos</strong> = {('(1+1)-CMA-ES', '% sigma_0=2.0, ccov^-=0, sigma_stop&lt;1e-9'): {'label': '(1+1)-CMA-ES'}, ('(1+1)-active-CMA-ES', '% sigma_0=2.0, ccov^-=0.3/(pow(n, 1.5)+2.0), sigma_stop&lt;1e-9'): {'label': '(1+1)-active-CMA-ES'}, ('ALPS', '% PUT MORE DETAILED INFORMATION, PARAMETER SETTINGS ETC'): {'label': 'ALPS'}, ('AMaLGaM-Full-Free', '% AMaLGaM-Full-Free'): {'color': 'tomato', 'label': 'AMaLGaM IDEA'}, ('BAYEDA', '% Simple continuous BAYEDA with 0.8 selection, p...ion=10*DIM, 2000*DIM fn evals, so 200 generations'): {'color': 'pink', 'label': 'BayEDAcG'}, ('BFGS', '% [-5, 5]^n, max 100 independent restarts.'): {'color': 'r', 'label': 'BFGS'}, ('Cauchy EDA', '% restarts up to 100, outermaxfevals 5e4*dim, inner maxfunevals 5e4*dim'): {'color': 'slategray', 'label': 'Cauchy EDA'}, ('DASA', '% test'): {'color': 'sienna', 'label': 'DASA'}, ('DEPSO', '% MORE DETAILED INFORMATION, PARAMETER SETTINGS ETC'): {'color': 'springgreen', 'label': 'DE-PSO', 'ls': '--'}, ('EDA-PSO', '% All historical information with correlation-triggered adaptive variance scaling.'): {'color': 'springgreen', 'label': 'EDA-PSO'}, ...}<br>
+<strong>allmedtarget</strong> = {}<br>
+<strong>allmintarget</strong> = {}<br>
+<strong>f</strong> = &lt;closed file './bbob_pproc/compall/../benchmarkshortinfos.txt', mode 'r' at 0xae6ec50&gt;<br>
+<strong>funInfos</strong> = {1: '1 Sphere', 2: '2 Ellipsoid separable', 3: '3 Rastrigin separable', 4: '4 Skew Rastrigin-Bueche separable', 5: '5 Linear slope', 6: '6 Attractive sector', 7: '7 Step-ellipsoid', 8: '8 Rosenbrock original', 9: '9 Rosenbrock rotated', 10: '10 Ellipsoid', ...}<br>
+<strong>funcId</strong> = '130'<br>
+<strong>funcInfo</strong> = 'Gallagher Cauchy'<br>
+<strong>infofile</strong> = './bbob_pproc/compall/../benchmarkshortinfos.txt'<br>
+<strong>isBenchmarkinfosFound</strong> = True<br>
+<strong>line</strong> = '130 Gallagher Cauchy<font color="#c040c0">\n</font>'</td></tr></table>
+</body></html>

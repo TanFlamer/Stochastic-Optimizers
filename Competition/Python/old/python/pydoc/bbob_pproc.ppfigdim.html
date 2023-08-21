@@ -1,0 +1,80 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module bbob_pproc.ppfigdim</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="bbob_pproc.html"><font color="#ffffff">bbob_pproc</font></a>.ppfigdim</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">&nbsp;</font></td></tr></table>
+    <p><tt>Creates&nbsp;ERTs&nbsp;and&nbsp;convergence&nbsp;figures&nbsp;for&nbsp;BBOB&nbsp;post-processing.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="bbob_pproc.bestalg.html">bbob_pproc.bestalg</a><br>
+<a href="bbob_pproc.bootstrap.html">bbob_pproc.bootstrap</a><br>
+</td><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+<a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+<a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-beautify"><strong>beautify</strong></a>(figHandle, figureName<font color="#909090">=None</font>, title<font color="#909090">=''</font>, fileFormat<font color="#909090">=('pdf', 'eps')</font>, labels<font color="#909090">=None</font>, scale<font color="#909090">=('linear', 'linear')</font>, legend<font color="#909090">=True</font>, locLegend<font color="#909090">='best'</font>, verbose<font color="#909090">=True</font>)</dt><dd><tt>Customize&nbsp;a&nbsp;figure&nbsp;by&nbsp;adding&nbsp;a&nbsp;legend,&nbsp;axis&nbsp;label,&nbsp;etc&nbsp;and&nbsp;save&nbsp;to&nbsp;a&nbsp;file.<br>
+&nbsp;<br>
+Inputs:<br>
+figHandle&nbsp;-&nbsp;handle&nbsp;to&nbsp;existing&nbsp;figure<br>
+figureName&nbsp;-&nbsp;name&nbsp;of&nbsp;the&nbsp;output&nbsp;figure<br>
+&nbsp;<br>
+Optional&nbsp;Inputs:<br>
+fileFormat&nbsp;-&nbsp;list&nbsp;of&nbsp;formats&nbsp;of&nbsp;output&nbsp;files<br>
+labels&nbsp;-&nbsp;list&nbsp;with&nbsp;xlabel&nbsp;and&nbsp;ylabel<br>
+scale&nbsp;-&nbsp;scale&nbsp;for&nbsp;x-axis&nbsp;and&nbsp;y-axis<br>
+legend&nbsp;-&nbsp;show&nbsp;legend<br>
+locLegend&nbsp;-&nbsp;location&nbsp;of&nbsp;legend</tt></dd></dl>
+ <dl><dt><a name="-beautify2"><strong>beautify2</strong></a>(figHandle, figureName<font color="#909090">=None</font>, title<font color="#909090">=''</font>, fileFormat<font color="#909090">=('pdf', 'eps')</font>, labels<font color="#909090">=None</font>, scale<font color="#909090">=('linear', 'linear')</font>, legend<font color="#909090">=True</font>, locLegend<font color="#909090">='best'</font>, verbose<font color="#909090">=True</font>)</dt><dd><tt>Customize&nbsp;a&nbsp;figure&nbsp;by&nbsp;adding&nbsp;a&nbsp;legend,&nbsp;axis&nbsp;label,&nbsp;etc&nbsp;and&nbsp;save&nbsp;to&nbsp;a&nbsp;file.<br>
+&nbsp;<br>
+Inputs:<br>
+figHandle&nbsp;-&nbsp;handle&nbsp;to&nbsp;existing&nbsp;figure<br>
+figureName&nbsp;-&nbsp;name&nbsp;of&nbsp;the&nbsp;output&nbsp;figure<br>
+&nbsp;<br>
+Optional&nbsp;Inputs:<br>
+fileFormat&nbsp;-&nbsp;list&nbsp;of&nbsp;formats&nbsp;of&nbsp;output&nbsp;files<br>
+labels&nbsp;-&nbsp;list&nbsp;with&nbsp;xlabel&nbsp;and&nbsp;ylabel<br>
+scale&nbsp;-&nbsp;scale&nbsp;for&nbsp;x-axis&nbsp;and&nbsp;y-axis<br>
+legend&nbsp;-&nbsp;show&nbsp;legend<br>
+locLegend&nbsp;-&nbsp;location&nbsp;of&nbsp;legend</tt></dd></dl>
+ <dl><dt><a name="-generateData"><strong>generateData</strong></a>(dataSet, targetFuncValue)</dt><dd><tt>Returns&nbsp;an&nbsp;array&nbsp;of&nbsp;results&nbsp;to&nbsp;be&nbsp;plotted.&nbsp;1st&nbsp;column&nbsp;is&nbsp;ert,&nbsp;2nd&nbsp;is<br>
+the&nbsp;number&nbsp;of&nbsp;success,&nbsp;3rd&nbsp;the&nbsp;success&nbsp;rate,&nbsp;4th&nbsp;the&nbsp;sum&nbsp;of&nbsp;the&nbsp;number&nbsp;of<br>
+function&nbsp;evaluations,&nbsp;and&nbsp;finally&nbsp;the&nbsp;median.</tt></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>(dsList, _valuesOfInterest, outputdir, verbose<font color="#909090">=True</font>)</dt><dd><tt>From&nbsp;a&nbsp;DataSetList,&nbsp;returns&nbsp;a&nbsp;convergence&nbsp;and&nbsp;ERT&nbsp;figure&nbsp;vs&nbsp;dim.</tt></dd></dl>
+ <dl><dt><a name="-main2"><strong>main2</strong></a>(dsList, _valuesOfInterest, outputdir, verbose<font color="#909090">=True</font>)</dt><dd><tt>From&nbsp;a&nbsp;DataSetList,&nbsp;returns&nbsp;a&nbsp;convergence&nbsp;and&nbsp;ERT/dim&nbsp;figure&nbsp;vs&nbsp;dim.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__package__</strong> = 'bbob_pproc'<br>
+<strong>colors</strong> = ('k', 'b', 'c', 'g', 'y', 'm', 'r', 'k', 'k', 'c', 'r', 'm')<br>
+<strong>dimsBBOB</strong> = (2, 3, 5, 10, 20, 40)<br>
+<strong>f</strong> = &lt;closed file './bbob_pproc/benchmarkshortinfos.txt', mode 'r' at 0xa0bcbb0&gt;<br>
+<strong>figformat</strong> = ('eps', 'pdf')<br>
+<strong>funInfos</strong> = {1: '1 Sphere', 2: '2 Ellipsoid separable', 3: '3 Rastrigin separable', 4: '4 Skew Rastrigin-Bueche separable', 5: '5 Linear slope', 6: '6 Attractive sector', 7: '7 Step-ellipsoid', 8: '8 Rosenbrock original', 9: '9 Rosenbrock rotated', 10: '10 Ellipsoid', ...}<br>
+<strong>funcId</strong> = '130'<br>
+<strong>funcInfo</strong> = 'Gallagher Cauchy'<br>
+<strong>infofile</strong> = './bbob_pproc/benchmarkshortinfos.txt'<br>
+<strong>isBenchmarkinfosFound</strong> = True<br>
+<strong>line</strong> = '130 Gallagher Cauchy<font color="#c040c0">\n</font>'</td></tr></table>
+</body></html>

@@ -1,0 +1,152 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module bbob_pproc.pplogloss</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="bbob_pproc.html"><font color="#ffffff">bbob_pproc</font></a>.pplogloss</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">&nbsp;</font></td></tr></table>
+    <p><tt>These&nbsp;comparisons&nbsp;are&nbsp;based&nbsp;on&nbsp;computing&nbsp;the&nbsp;ratio&nbsp;between&nbsp;an&nbsp;ERT&nbsp;value&nbsp;and&nbsp;a<br>
+reference&nbsp;(best)&nbsp;ERT&nbsp;value&nbsp;(or&nbsp;the&nbsp;inverse)<br>
+&nbsp;<br>
+ERT&nbsp;loss&nbsp;ratio&nbsp;of&nbsp;an&nbsp;algorithm&nbsp;A&nbsp;for&nbsp;comparison&nbsp;to&nbsp;BBOB-2009.&nbsp;This&nbsp;works<br>
+only&nbsp;as&nbsp;comparison&nbsp;to&nbsp;a&nbsp;set&nbsp;of&nbsp;algorithms&nbsp;that&nbsp;reach&nbsp;at&nbsp;least&nbsp;the&nbsp;same<br>
+target&nbsp;values.&nbsp;Let&nbsp;f=f_A(EVALS)&nbsp;be&nbsp;the&nbsp;smallest&nbsp;target&nbsp;value&nbsp;such&nbsp;that&nbsp;the<br>
+expected&nbsp;running&nbsp;time&nbsp;of&nbsp;algorithm&nbsp;A&nbsp;was&nbsp;smaller&nbsp;than&nbsp;or&nbsp;equal&nbsp;to&nbsp;EVALS.<br>
+Let&nbsp;ERT_A=EVALS,&nbsp;if&nbsp;ERT_best(next&nbsp;difficult&nbsp;f)&nbsp;&lt;&nbsp;EVALS&nbsp;and<br>
+ERT_A=ERT_A(f_A(EVALS))&nbsp;otherwise&nbsp;(we&nbsp;have&nbsp;ERT_A(f_A(EVALS))&nbsp;&lt;=&nbsp;EVALS).<br>
+The&nbsp;ERT&nbsp;loss&nbsp;ratio&nbsp;for&nbsp;algorithm&nbsp;A&nbsp;is&nbsp;defined&nbsp;as:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Loss_A&nbsp;=&nbsp;stat_fcts(exp(CrE_A)&nbsp;*&nbsp;ERT_A&nbsp;/&nbsp;ERT_best(f))<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;where&nbsp;f&nbsp;is&nbsp;a&nbsp;function&nbsp;of&nbsp;EVALS&nbsp;and&nbsp;stat_fcts&nbsp;is&nbsp;the&nbsp;desired&nbsp;statistics<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;over&nbsp;the&nbsp;values&nbsp;from&nbsp;all&nbsp;functions&nbsp;(or&nbsp;a&nbsp;subgroup&nbsp;of&nbsp;functions),&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;example&nbsp;the&nbsp;geometric&nbsp;mean,&nbsp;min,&nbsp;max&nbsp;or&nbsp;any&nbsp;quantile.&nbsp;More&nbsp;specific:&nbsp;we<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;plot&nbsp;versus&nbsp;'the&nbsp;budget&nbsp;EVALS'&nbsp;the&nbsp;geometric&nbsp;mean&nbsp;(line)&nbsp;and&nbsp;Box-Whisker<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;error&nbsp;bars&nbsp;at&nbsp;EVALS=2*D,&nbsp;10*D,&nbsp;100*D,...:&nbsp;a&nbsp;box&nbsp;between&nbsp;25%&nbsp;and&nbsp;75%&nbsp;with<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;median&nbsp;as&nbsp;additional&nbsp;symbol,&nbsp;a&nbsp;line&nbsp;with&nbsp;"T"&nbsp;as&nbsp;end-marker&nbsp;between<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10%&nbsp;and&nbsp;90%&nbsp;(the&nbsp;box&nbsp;covers&nbsp;the&nbsp;line)&nbsp;and&nbsp;a&nbsp;single&nbsp;point&nbsp;for&nbsp;min,&nbsp;max.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For&nbsp;a&nbsp;function&nbsp;subgroup&nbsp;the&nbsp;Box-Whisker&nbsp;is&nbsp;replaced&nbsp;with&nbsp;the&nbsp;four&nbsp;or&nbsp;five<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actual&nbsp;points&nbsp;with&nbsp;the&nbsp;function&nbsp;number&nbsp;written.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Caption:&nbsp;ERT&nbsp;loss&nbsp;ratio:&nbsp;expected&nbsp;running&nbsp;time,&nbsp;ERT&nbsp;(measured&nbsp;in&nbsp;number<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of&nbsp;function&nbsp;evaluations),&nbsp;divided&nbsp;by&nbsp;the&nbsp;best&nbsp;ERT&nbsp;seen&nbsp;in&nbsp;BBOB-2009&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;respectively&nbsp;same&nbsp;function&nbsp;and&nbsp;target&nbsp;function&nbsp;value,&nbsp;plotted&nbsp;versus<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;function&nbsp;evaluations&nbsp;for&nbsp;the&nbsp;functions&nbsp;$f_1$--$f_{24}$&nbsp;in<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dimension&nbsp;$D=XXX$,&nbsp;corrected&nbsp;by&nbsp;the&nbsp;parameter-crafting-effort<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$\exp(CrE)==YYY$.&nbsp;Line:&nbsp;geometric&nbsp;mean&nbsp;over&nbsp;all&nbsp;functions.&nbsp;Box-Whisker<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;error&nbsp;bars:&nbsp;25-75\%-percentile&nbsp;range&nbsp;with&nbsp;median&nbsp;(box),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10-90\%-percentile&nbsp;range&nbsp;(line),&nbsp;and&nbsp;minimum&nbsp;and&nbsp;maximum&nbsp;ERT&nbsp;loss&nbsp;ratio<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(points).&nbsp;Alternative&nbsp;Box-Whisker&nbsp;sentence:&nbsp;Points:&nbsp;ERT&nbsp;loss&nbsp;ratio&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;each&nbsp;function<br>
+&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;The&nbsp;problem:&nbsp;how&nbsp;to&nbsp;find&nbsp;out&nbsp;CrE_A?&nbsp;Possible&nbsp;solution:&nbsp;ask&nbsp;for&nbsp;input&nbsp;in<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;script&nbsp;and&nbsp;put&nbsp;the&nbsp;given&nbsp;number&nbsp;into&nbsp;the&nbsp;caption&nbsp;and&nbsp;put&nbsp;exp(CrE_A)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;as&nbsp;small&nbsp;symbol&nbsp;on&nbsp;the&nbsp;y-axis&nbsp;of&nbsp;the&nbsp;figure&nbsp;for&nbsp;cross-checking.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;This&nbsp;should&nbsp;make&nbsp;a&nbsp;collection&nbsp;of&nbsp;graphs&nbsp;for&nbsp;all&nbsp;functions&nbsp;and&nbsp;all<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;subgroups&nbsp;which&nbsp;gives&nbsp;an&nbsp;additional&nbsp;page&nbsp;in&nbsp;the&nbsp;'single&nbsp;algorithm'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;template.&nbsp;Respective&nbsp;tables&nbsp;could&nbsp;be&nbsp;side-by-side&nbsp;the&nbsp;graphs.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;Example&nbsp;for&nbsp;how&nbsp;to&nbsp;read&nbsp;the&nbsp;graph:&nbsp;a&nbsp;loss&nbsp;ratio&nbsp;of&nbsp;4&nbsp;for&nbsp;ERT=20D&nbsp;means,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;that&nbsp;the&nbsp;function&nbsp;value&nbsp;reached&nbsp;with&nbsp;ERT=20D&nbsp;could&nbsp;be&nbsp;reached&nbsp;with&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;respective&nbsp;best&nbsp;algorithm&nbsp;in&nbsp;ERT_best=5D&nbsp;function&nbsp;evaluations&nbsp;on&nbsp;average.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Therefore,&nbsp;given&nbsp;a&nbsp;budget&nbsp;of&nbsp;20*D&nbsp;function&nbsp;evaluations,&nbsp;the&nbsp;best<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;algorithm&nbsp;could&nbsp;have&nbsp;further&nbsp;improved&nbsp;the&nbsp;function&nbsp;value&nbsp;using&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remaining&nbsp;15*D&nbsp;($75\%=1-1/4$)&nbsp;function&nbsp;evaluations.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="bbob_pproc.bestalg.html">bbob_pproc.bestalg</a><br>
+<a href="bbob_pproc.bootstrap.html">bbob_pproc.bootstrap</a><br>
+<a href="gzip.html">gzip</a><br>
+</td><td width="25%" valign=top><a href="matplotlib.mlab.html">matplotlib.mlab</a><br>
+<a href="numpy.html">numpy</a><br>
+<a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="cPickle.html">cPickle</a><br>
+<a href="matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+<a href="warnings.html">warnings</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-beautify"><strong>beautify</strong></a>(figureName, evalfrange, fileFormat, verbose)</dt><dd><tt>Format&nbsp;the&nbsp;figure.</tt></dd></dl>
+ <dl><dt><a name="-boxplot"><strong>boxplot</strong></a>(x, notch<font color="#909090">=0</font>, sym<font color="#909090">='b+'</font>, positions<font color="#909090">=None</font>, widths<font color="#909090">=None</font>)</dt><dd><tt>Adapted&nbsp;from&nbsp;matplotlib.axes&nbsp;0.98.5.2<br>
+Modified&nbsp;such&nbsp;that&nbsp;the&nbsp;caps&nbsp;are&nbsp;set&nbsp;to&nbsp;the&nbsp;10th&nbsp;and&nbsp;90th&nbsp;percentiles.<br>
+&nbsp;<br>
+call&nbsp;signature::<br>
+&nbsp;<br>
+&nbsp;&nbsp;<a href="#-boxplot">boxplot</a>(x,&nbsp;notch=0,&nbsp;sym='+',&nbsp;positions=None,&nbsp;widths=None)<br>
+&nbsp;<br>
+Make&nbsp;a&nbsp;box&nbsp;and&nbsp;whisker&nbsp;plot&nbsp;for&nbsp;each&nbsp;column&nbsp;of&nbsp;*x*&nbsp;or&nbsp;each<br>
+vector&nbsp;in&nbsp;sequence&nbsp;*x*.&nbsp;&nbsp;The&nbsp;box&nbsp;extends&nbsp;from&nbsp;the&nbsp;lower&nbsp;to<br>
+upper&nbsp;quartile&nbsp;values&nbsp;of&nbsp;the&nbsp;data,&nbsp;with&nbsp;a&nbsp;line&nbsp;at&nbsp;the&nbsp;median.<br>
+The&nbsp;whiskers&nbsp;extend&nbsp;from&nbsp;the&nbsp;box&nbsp;to&nbsp;show&nbsp;the&nbsp;range&nbsp;of&nbsp;the<br>
+data.&nbsp;&nbsp;Flier&nbsp;points&nbsp;are&nbsp;those&nbsp;past&nbsp;the&nbsp;end&nbsp;of&nbsp;the&nbsp;whiskers.<br>
+&nbsp;<br>
+-&nbsp;*notch*&nbsp;=&nbsp;0&nbsp;(default)&nbsp;produces&nbsp;a&nbsp;rectangular&nbsp;box&nbsp;plot.<br>
+-&nbsp;*notch*&nbsp;=&nbsp;1&nbsp;will&nbsp;produce&nbsp;a&nbsp;notched&nbsp;box&nbsp;plot<br>
+&nbsp;<br>
+*sym*&nbsp;(default&nbsp;'b+')&nbsp;is&nbsp;the&nbsp;default&nbsp;symbol&nbsp;for&nbsp;flier&nbsp;points.<br>
+Enter&nbsp;an&nbsp;empty&nbsp;string&nbsp;('')&nbsp;if&nbsp;you&nbsp;don't&nbsp;want&nbsp;to&nbsp;show&nbsp;fliers.<br>
+&nbsp;<br>
+*whis*&nbsp;(default&nbsp;1.5)&nbsp;defines&nbsp;the&nbsp;length&nbsp;of&nbsp;the&nbsp;whiskers&nbsp;as<br>
+a&nbsp;function&nbsp;of&nbsp;the&nbsp;inner&nbsp;quartile&nbsp;range.&nbsp;&nbsp;They&nbsp;extend&nbsp;to&nbsp;the<br>
+most&nbsp;extreme&nbsp;data&nbsp;point&nbsp;within&nbsp;(&nbsp;``whis*(75%-25%)``&nbsp;)&nbsp;data&nbsp;range.<br>
+&nbsp;<br>
+*positions*&nbsp;(default&nbsp;1,2,...,n)&nbsp;sets&nbsp;the&nbsp;horizontal&nbsp;positions&nbsp;of<br>
+the&nbsp;boxes.&nbsp;The&nbsp;ticks&nbsp;and&nbsp;limits&nbsp;are&nbsp;automatically&nbsp;set&nbsp;to&nbsp;match<br>
+the&nbsp;positions.<br>
+&nbsp;<br>
+*widths*&nbsp;is&nbsp;either&nbsp;a&nbsp;scalar&nbsp;or&nbsp;a&nbsp;vector&nbsp;and&nbsp;sets&nbsp;the&nbsp;width&nbsp;of<br>
+each&nbsp;box.&nbsp;The&nbsp;default&nbsp;is&nbsp;0.5,&nbsp;or&nbsp;``0.15*(distance&nbsp;between&nbsp;extreme<br>
+positions)``&nbsp;if&nbsp;that&nbsp;is&nbsp;smaller.<br>
+&nbsp;<br>
+*x*&nbsp;is&nbsp;an&nbsp;array&nbsp;or&nbsp;a&nbsp;sequence&nbsp;of&nbsp;vectors.<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;dictionary&nbsp;mapping&nbsp;each&nbsp;component&nbsp;of&nbsp;the&nbsp;boxplot<br>
+to&nbsp;a&nbsp;list&nbsp;of&nbsp;the&nbsp;:class:`matplotlib.lines.Line2D`<br>
+instances&nbsp;created.<br>
+&nbsp;<br>
+**Example:**<br>
+&nbsp;<br>
+..&nbsp;plot::&nbsp;pyplots/boxplot_demo.py</tt></dd></dl>
+ <dl><dt><a name="-detERT"><strong>detERT</strong></a>(entry, funvals)</dt></dl>
+ <dl><dt><a name="-detf"><strong>detf</strong></a>(entry, evals)</dt><dd><tt>Determines&nbsp;a&nbsp;function&nbsp;value&nbsp;given&nbsp;a&nbsp;number&nbsp;of&nbsp;function&nbsp;evaluations.<br>
+Let&nbsp;A&nbsp;be&nbsp;the&nbsp;algorithm&nbsp;considered.&nbsp;Let&nbsp;f=f_A(evals)&nbsp;be&nbsp;the&nbsp;smallest&nbsp;target<br>
+value&nbsp;such&nbsp;that&nbsp;the&nbsp;expected&nbsp;running&nbsp;time&nbsp;of&nbsp;algorithm&nbsp;A&nbsp;was&nbsp;smaller&nbsp;than<br>
+or&nbsp;equal&nbsp;to&nbsp;evals.<br>
+----<br>
+Keyword&nbsp;arguments:<br>
+entry<br>
+evals&nbsp;--&nbsp;list&nbsp;of&nbsp;number&nbsp;of&nbsp;function&nbsp;evaluations&nbsp;considered<br>
+&nbsp;<br>
+Returns:<br>
+res&nbsp;--&nbsp;list&nbsp;of&nbsp;the&nbsp;target&nbsp;function&nbsp;values</tt></dd></dl>
+ <dl><dt><a name="-generateData"><strong>generateData</strong></a>(dsList, evals, CrE_A)</dt></dl>
+ <dl><dt><a name="-generateFigure"><strong>generateFigure</strong></a>(dsList, CrE, isStoringXRange, outputdir, suffix, verbose<font color="#909090">=True</font>)</dt><dd><tt>Generates&nbsp;ERT&nbsp;loss&nbsp;ratio&nbsp;figures.<br>
+dsList&nbsp;is&nbsp;a&nbsp;list&nbsp;of&nbsp;the&nbsp;DataSet&nbsp;instances&nbsp;for&nbsp;a&nbsp;given&nbsp;algorithm&nbsp;in&nbsp;a&nbsp;given<br>
+dimension.</tt></dd></dl>
+ <dl><dt><a name="-generateTable"><strong>generateTable</strong></a>(dsList, CrE, outputdir, suffix, verbose<font color="#909090">=True</font>)</dt><dd><tt>Generates&nbsp;ERT&nbsp;loss&nbsp;ratio&nbsp;tables.<br>
+dsList&nbsp;is&nbsp;a&nbsp;list&nbsp;of&nbsp;the&nbsp;DataSet&nbsp;instance&nbsp;for&nbsp;a&nbsp;given&nbsp;algorithm&nbsp;in&nbsp;a&nbsp;given<br>
+dimension.</tt></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>(dsList, CrE, isStoringXRange, outputdir, suffix, verbose<font color="#909090">=True</font>)</dt></dl>
+ <dl><dt><a name="-plot"><strong>plot</strong></a>(xdata, ydata)</dt></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__package__</strong> = None<br>
+<strong>absolute_import</strong> = _Feature((2, 5, 0, 'alpha', 1), (2, 7, 0, 'alpha', 0), 16384)<br>
+<strong>evalf</strong> = None<br>
+<strong>f_thresh</strong> = 1e-08<br>
+<strong>figformat</strong> = ('eps', 'pdf')</td></tr></table>
+</body></html>

@@ -1,0 +1,224 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module bbob_pproc.run</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="bbob_pproc.html"><font color="#ffffff">bbob_pproc</font></a>.run</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">&nbsp;</font></td></tr></table>
+    <p><tt>Main&nbsp;module&nbsp;for&nbsp;post-processing&nbsp;the&nbsp;data&nbsp;of&nbsp;one&nbsp;algorithm.<br>
+&nbsp;&nbsp;&nbsp;Calls&nbsp;the&nbsp;main&nbsp;function&nbsp;of&nbsp;bbob_pproc&nbsp;with&nbsp;arguments&nbsp;from&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;command&nbsp;line.&nbsp;Executes&nbsp;the&nbsp;BBOB&nbsp;postprocessing&nbsp;on&nbsp;the&nbsp;given<br>
+&nbsp;&nbsp;&nbsp;filename&nbsp;and&nbsp;folder&nbsp;arguments,&nbsp;using&nbsp;all&nbsp;found&nbsp;.info&nbsp;files.<br>
+Synopsis:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;python&nbsp;path_to_folder/bbob_pproc/run.py&nbsp;[OPTIONS]&nbsp;FILE_NAME&nbsp;FOLDER_NAME...<br>
+Help:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;python&nbsp;path_to_folder/bbob_pproc/run.py&nbsp;-h</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="bbob_pproc.findfiles.html">bbob_pproc.findfiles</a><br>
+<a href="getopt.html">getopt</a><br>
+<a href="matplotlib.html">matplotlib</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="bbob_pproc.ppfigdim.html">bbob_pproc.ppfigdim</a><br>
+<a href="bbob_pproc.pplogloss.html">bbob_pproc.pplogloss</a><br>
+</td><td width="25%" valign=top><a href="bbob_pproc.pprldistr.html">bbob_pproc.pprldistr</a><br>
+<a href="bbob_pproc.pptex.html">bbob_pproc.pptex</a><br>
+<a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top><a href="warnings.html">warnings</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="exceptions.html#Exception">exceptions.Exception</a>(<a href="exceptions.html#BaseException">exceptions.BaseException</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="bbob_pproc.run.html#Usage">Usage</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Usage">class <strong>Usage</strong></a>(<a href="exceptions.html#Exception">exceptions.Exception</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="bbob_pproc.run.html#Usage">Usage</a></dd>
+<dd><a href="exceptions.html#Exception">exceptions.Exception</a></dd>
+<dd><a href="exceptions.html#BaseException">exceptions.BaseException</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Usage-__init__"><strong>__init__</strong></a>(self, msg)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object at 0x8226dc0&gt;<dd><tt>T.<a href="#Usage-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;object&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+<hr>
+Methods inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><a name="Usage-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#Usage-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="Usage-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#Usage-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="Usage-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#Usage-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="Usage-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#Usage-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="Usage-__reduce__"><strong>__reduce__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Usage-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#Usage-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="Usage-__setattr__"><strong>__setattr__</strong></a>(...)</dt><dd><tt>x.<a href="#Usage-__setattr__">__setattr__</a>('name',&nbsp;value)&nbsp;&lt;==&gt;&nbsp;x.name&nbsp;=&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="Usage-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Usage-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#Usage-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<dl><dt><a name="Usage-__unicode__"><strong>__unicode__</strong></a>(...)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+<dl><dt><strong>message</strong></dt>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-main"><strong>main</strong></a>(argv<font color="#909090">=None</font>)</dt><dd><tt>Generates&nbsp;from&nbsp;BBOB&nbsp;experiment&nbsp;data&nbsp;some&nbsp;outputs&nbsp;for&nbsp;a&nbsp;tex&nbsp;document.<br>
+&nbsp;<br>
+Provided&nbsp;with&nbsp;some&nbsp;index&nbsp;entries&nbsp;(found&nbsp;in&nbsp;files&nbsp;with&nbsp;the&nbsp;'info'&nbsp;extension)<br>
+this&nbsp;routine&nbsp;outputs&nbsp;figure&nbsp;and&nbsp;TeX&nbsp;files&nbsp;in&nbsp;the&nbsp;folder&nbsp;'ppdata'&nbsp;needed&nbsp;for<br>
+the&nbsp;compilation&nbsp;of&nbsp;&nbsp;latex&nbsp;document&nbsp;templateBBOBarticle.tex.&nbsp;These&nbsp;output<br>
+files&nbsp;will&nbsp;contain&nbsp;performance&nbsp;tables,&nbsp;performance&nbsp;scaling&nbsp;figures&nbsp;and<br>
+empirical&nbsp;cumulative&nbsp;distribution&nbsp;figures.&nbsp;On&nbsp;subsequent&nbsp;executions,&nbsp;new<br>
+files&nbsp;will&nbsp;be&nbsp;added&nbsp;to&nbsp;the&nbsp;output&nbsp;directory,&nbsp;overwriting&nbsp;existing&nbsp;older<br>
+files&nbsp;in&nbsp;the&nbsp;process.<br>
+&nbsp;<br>
+Keyword&nbsp;arguments:<br>
+argv&nbsp;--&nbsp;list&nbsp;of&nbsp;strings&nbsp;containing&nbsp;options&nbsp;and&nbsp;arguments.&nbsp;If&nbsp;not&nbsp;given,<br>
+sys.argv&nbsp;is&nbsp;accessed.<br>
+&nbsp;<br>
+argv&nbsp;should&nbsp;list&nbsp;either&nbsp;names&nbsp;of&nbsp;info&nbsp;files&nbsp;or&nbsp;folders&nbsp;containing&nbsp;info<br>
+files.&nbsp;argv&nbsp;can&nbsp;also&nbsp;contain&nbsp;post-processed&nbsp;pickle&nbsp;files&nbsp;generated&nbsp;by&nbsp;this<br>
+routine.&nbsp;Furthermore,&nbsp;argv&nbsp;can&nbsp;begin&nbsp;with,&nbsp;in&nbsp;any&nbsp;order,&nbsp;facultative&nbsp;option<br>
+flags&nbsp;listed&nbsp;below.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-h,&nbsp;--help<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display&nbsp;this&nbsp;message<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-v,&nbsp;--verbose<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;verbose&nbsp;mode,&nbsp;prints&nbsp;out&nbsp;operations.&nbsp;When&nbsp;not&nbsp;in&nbsp;verbose&nbsp;mode,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output&nbsp;is&nbsp;to&nbsp;be&nbsp;expected,&nbsp;except&nbsp;for&nbsp;errors.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-p,&nbsp;--pickle<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;generates&nbsp;pickle&nbsp;post&nbsp;processed&nbsp;data&nbsp;files.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-o,&nbsp;--output-dir&nbsp;OUTPUTDIR<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;change&nbsp;the&nbsp;default&nbsp;output&nbsp;directory&nbsp;('ppdata')&nbsp;to&nbsp;OUTPUTDIR<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--crafting-effort=VALUE<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sets&nbsp;the&nbsp;crafting&nbsp;effort&nbsp;to&nbsp;VALUE.&nbsp;Otherwise&nbsp;the&nbsp;user&nbsp;will&nbsp;be<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prompted.&nbsp;This&nbsp;flag&nbsp;is&nbsp;useful&nbsp;when&nbsp;running&nbsp;this&nbsp;script&nbsp;in&nbsp;batch.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-f,&nbsp;--final<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lengthens&nbsp;the&nbsp;bootstrapping&nbsp;process&nbsp;used&nbsp;as&nbsp;dispersion&nbsp;measure&nbsp;in<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;tables&nbsp;generation.&nbsp;This&nbsp;might&nbsp;at&nbsp;least&nbsp;double&nbsp;the&nbsp;time&nbsp;of&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;whole&nbsp;post-processing.&nbsp;Please&nbsp;use&nbsp;this&nbsp;option&nbsp;when&nbsp;generating&nbsp;your<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;final&nbsp;paper.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--tab-only,&nbsp;--fig-only,&nbsp;--rld-only,&nbsp;--los-only<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;these&nbsp;options&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;output&nbsp;respectively&nbsp;the&nbsp;tex&nbsp;tables,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;convergence&nbsp;and&nbsp;ENFEs&nbsp;graphs&nbsp;figures,&nbsp;run&nbsp;length&nbsp;distribution<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;figures,&nbsp;ERT&nbsp;loss&nbsp;ratio&nbsp;figures&nbsp;only.&nbsp;A&nbsp;combination&nbsp;of&nbsp;any&nbsp;two&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;these&nbsp;options&nbsp;results&nbsp;in&nbsp;no&nbsp;output.<br>
+&nbsp;<br>
+Exceptions&nbsp;raised:<br>
+<a href="#Usage">Usage</a>&nbsp;--&nbsp;Gives&nbsp;back&nbsp;a&nbsp;usage&nbsp;message.<br>
+&nbsp;<br>
+Examples:<br>
+&nbsp;<br>
+*&nbsp;Calling&nbsp;the&nbsp;run.py&nbsp;interface&nbsp;from&nbsp;the&nbsp;command&nbsp;line:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;python&nbsp;bbob_pproc/run.py&nbsp;-v&nbsp;experiment1<br>
+&nbsp;<br>
+will&nbsp;post-process&nbsp;the&nbsp;folder&nbsp;experiment1&nbsp;and&nbsp;all&nbsp;its&nbsp;containing&nbsp;data,<br>
+base&nbsp;on&nbsp;the&nbsp;found&nbsp;.info&nbsp;files&nbsp;in&nbsp;the&nbsp;folder.&nbsp;The&nbsp;result&nbsp;will&nbsp;appear<br>
+in&nbsp;folder&nbsp;ppdata.&nbsp;The&nbsp;-v&nbsp;option&nbsp;adds&nbsp;verbosity.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;python&nbsp;bbob_pproc/run.py&nbsp;-o&nbsp;otherppdata&nbsp;experiment2/*.info<br>
+&nbsp;<br>
+This&nbsp;will&nbsp;execute&nbsp;the&nbsp;post-processing&nbsp;on&nbsp;the&nbsp;info&nbsp;files&nbsp;found&nbsp;in<br>
+experiment2.&nbsp;The&nbsp;result&nbsp;will&nbsp;be&nbsp;located&nbsp;in&nbsp;the&nbsp;alternative&nbsp;location<br>
+otherppdata.<br>
+&nbsp;<br>
+*&nbsp;Loading&nbsp;this&nbsp;package&nbsp;and&nbsp;calling&nbsp;the&nbsp;main&nbsp;from&nbsp;the&nbsp;command&nbsp;line<br>
+&nbsp;&nbsp;(requires&nbsp;that&nbsp;the&nbsp;path&nbsp;to&nbsp;this&nbsp;package&nbsp;is&nbsp;in&nbsp;python&nbsp;search&nbsp;path):<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;python&nbsp;-m&nbsp;bbob_pproc&nbsp;-h<br>
+&nbsp;<br>
+This&nbsp;will&nbsp;print&nbsp;out&nbsp;this&nbsp;help&nbsp;message.<br>
+&nbsp;<br>
+*&nbsp;From&nbsp;the&nbsp;python&nbsp;interactive&nbsp;shell&nbsp;(requires&nbsp;that&nbsp;the&nbsp;path&nbsp;to&nbsp;this<br>
+&nbsp;&nbsp;package&nbsp;is&nbsp;in&nbsp;python&nbsp;search&nbsp;path):<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;import&nbsp;bbob_pproc<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;bbob_pproc.<a href="#-main">main</a>('-o&nbsp;outputfolder&nbsp;folder1'.split())<br>
+&nbsp;<br>
+This&nbsp;will&nbsp;execute&nbsp;the&nbsp;post-processing&nbsp;on&nbsp;the&nbsp;index&nbsp;files&nbsp;found&nbsp;in&nbsp;folder1.<br>
+The&nbsp;-o&nbsp;option&nbsp;changes&nbsp;the&nbsp;output&nbsp;folder&nbsp;from&nbsp;the&nbsp;default&nbsp;ppdata&nbsp;to<br>
+outputfolder.</tt></dd></dl>
+ <dl><dt><a name="-usage"><strong>usage</strong></a>()</dt></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__package__</strong> = None<br>
+<strong>absolute_import</strong> = _Feature((2, 5, 0, 'alpha', 1), (2, 7, 0, 'alpha', 0), 16384)<br>
+<strong>figValsOfInterest</strong> = ({1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10, 8: 10, 9: 10, 10: 10, ...}, {1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, ...}, {1: 0.10000000000000001, 2: 0.10000000000000001, 3: 0.10000000000000001, 4: 0.10000000000000001, 5: 0.10000000000000001, 6: 0.10000000000000001, 7: 0.10000000000000001, 8: 0.10000000000000001, 9: 0.10000000000000001, 10: 0.10000000000000001, ...}, {1: 0.01, 2: 0.01, 3: 0.01, 4: 0.01, 5: 0.01, 6: 0.01, 7: 0.01, 8: 0.01, 9: 0.01, 10: 0.01, ...}, {1: 0.001, 2: 0.001, 3: 0.001, 4: 0.001, 5: 0.001, 6: 0.001, 7: 0.001, 8: 0.001, 9: 0.001, 10: 0.001, ...}, {1: 1.0000000000000001e-05, 2: 1.0000000000000001e-05, 3: 1.0000000000000001e-05, 4: 1.0000000000000001e-05, 5: 1.0000000000000001e-05, 6: 1.0000000000000001e-05, 7: 1.0000000000000001e-05, 8: 1.0000000000000001e-05, 9: 1.0000000000000001e-05, 10: 1.0000000000000001e-05, ...}, {1: 1e-08, 2: 1e-08, 3: 1e-08, 4: 1e-08, 5: 1e-08, 6: 1e-08, 7: 1e-08, 8: 1e-08, 9: 1e-08, 10: 1e-08, ...})<br>
+<strong>instancesOfInterest</strong> = {1: 3, 2: 3, 3: 3, 4: 3, 5: 3}<br>
+<strong>instancesOfInterest2010</strong> = {1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, ...}<br>
+<strong>rldDimsOfInterest</strong> = (5, 20)<br>
+<strong>rldValsOfInterest</strong> = ({1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10, 8: 10, 9: 10, 10: 10, ...}, {1: 0.10000000000000001, 2: 0.10000000000000001, 3: 0.10000000000000001, 4: 0.10000000000000001, 5: 0.10000000000000001, 6: 0.10000000000000001, 7: 0.10000000000000001, 8: 0.10000000000000001, 9: 0.10000000000000001, 10: 0.10000000000000001, ...}, {1: 0.0001, 2: 0.0001, 3: 0.0001, 4: 0.0001, 5: 0.0001, 6: 0.0001, 7: 0.0001, 8: 0.0001, 9: 0.0001, 10: 0.0001, ...}, {1: 1e-08, 2: 1e-08, 3: 1e-08, 4: 1e-08, 5: 1e-08, 6: 1e-08, 7: 1e-08, 8: 1e-08, 9: 1e-08, 10: 1e-08, ...})<br>
+<strong>tabDimsOfInterest</strong> = (5, 20)<br>
+<strong>tabValsOfInterest</strong> = ({1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10, 8: 10, 9: 10, 10: 10, ...}, {1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, ...}, {1: 0.10000000000000001, 2: 0.10000000000000001, 3: 0.10000000000000001, 4: 0.10000000000000001, 5: 0.10000000000000001, 6: 0.10000000000000001, 7: 0.10000000000000001, 8: 0.10000000000000001, 9: 0.10000000000000001, 10: 0.10000000000000001, ...}, {1: 0.001, 2: 0.001, 3: 0.001, 4: 0.001, 5: 0.001, 6: 0.001, 7: 0.001, 8: 0.001, 9: 0.001, 10: 0.001, ...}, {1: 1.0000000000000001e-05, 2: 1.0000000000000001e-05, 3: 1.0000000000000001e-05, 4: 1.0000000000000001e-05, 5: 1.0000000000000001e-05, 6: 1.0000000000000001e-05, 7: 1.0000000000000001e-05, 8: 1.0000000000000001e-05, 9: 1.0000000000000001e-05, 10: 1.0000000000000001e-05, ...}, {1: 1e-08, 2: 1e-08, 3: 1e-08, 4: 1e-08, 5: 1e-08, 6: 1e-08, 7: 1e-08, 8: 1e-08, 9: 1e-08, 10: 1e-08, ...})</td></tr></table>
+</body></html>

@@ -1,0 +1,173 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module bbob_pproc.bootstrap</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="bbob_pproc.html"><font color="#ffffff">bbob_pproc</font></a>.bootstrap</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">&nbsp;</font></td></tr></table>
+    <p><tt>Bootstrapping&nbsp;and&nbsp;statistics&nbsp;routines.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-draw"><strong>draw</strong></a>(data, percentiles, samplesize<font color="#909090">=1000.0</font>, func<font color="#909090">=&lt;function sp1 at 0x9c43e2c&gt;</font>, args<font color="#909090">=()</font>)</dt><dd><tt>Generates&nbsp;the&nbsp;empirical&nbsp;bootstrap&nbsp;distribution&nbsp;from&nbsp;a&nbsp;sample.<br>
+Input:<br>
+data--a&nbsp;sequence&nbsp;of&nbsp;data&nbsp;values<br>
+percentiles--a&nbsp;single&nbsp;scalar&nbsp;value&nbsp;or&nbsp;a&nbsp;sequence&nbsp;of&nbsp;percentiles<br>
+&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;be&nbsp;computed&nbsp;from&nbsp;the&nbsp;bootstrapped&nbsp;distribution.<br>
+func--function&nbsp;that&nbsp;computes&nbsp;the&nbsp;statistics&nbsp;as&nbsp;func(data,*args)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;or&nbsp;func(data,*args)[0],&nbsp;by&nbsp;default&nbsp;bootstrap.sp1<br>
+args--arguments&nbsp;to&nbsp;func,&nbsp;the&nbsp;zero-th&nbsp;element&nbsp;of&nbsp;args&nbsp;is&nbsp;expected&nbsp;to&nbsp;be&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sequence&nbsp;of&nbsp;boolean&nbsp;giving&nbsp;the&nbsp;success&nbsp;status&nbsp;of&nbsp;the&nbsp;associated&nbsp;data<br>
+&nbsp;&nbsp;&nbsp;&nbsp;value.&nbsp;This&nbsp;specialization&nbsp;of&nbsp;the&nbsp;draw&nbsp;procedure&nbsp;is&nbsp;due&nbsp;to&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;interface&nbsp;of&nbsp;the&nbsp;performance&nbsp;computation&nbsp;methods&nbsp;sp1&nbsp;and&nbsp;sp.<br>
+samplesize--number&nbsp;of&nbsp;bootstraps&nbsp;drawn,&nbsp;default&nbsp;is&nbsp;1e3,<br>
+&nbsp;&nbsp;&nbsp;for&nbsp;more&nbsp;reliable&nbsp;values&nbsp;choose&nbsp;rather&nbsp;1e4.&nbsp;<br>
+&nbsp;&nbsp;&nbsp;performance&nbsp;is&nbsp;linear&nbsp;in&nbsp;samplesize,&nbsp;0.2s&nbsp;for&nbsp;samplesize=1000.<br>
+Return:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(prctiles,&nbsp;all_samplesize_bootstrapped_values_sorted)<br>
+Example:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;import&nbsp;bootstrap<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;=&nbsp;numpy.random.randn(22)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;res&nbsp;=&nbsp;bootstrap.<a href="#-draw">draw</a>(data,&nbsp;(10,50,90),&nbsp;samplesize=1e4)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print&nbsp;res[0]<br>
+Remark:<br>
+&nbsp;&nbsp;&nbsp;NaN-values&nbsp;are&nbsp;also&nbsp;bootstrapped,&nbsp;but&nbsp;disregarded&nbsp;for&nbsp;the&nbsp;<br>
+&nbsp;&nbsp;&nbsp;calculation&nbsp;of&nbsp;percentiles&nbsp;which&nbsp;can&nbsp;lead&nbsp;to&nbsp;somewhat<br>
+&nbsp;&nbsp;&nbsp;unexpected&nbsp;results.</tt></dd></dl>
+ <dl><dt><a name="-drawSP"><strong>drawSP</strong></a>(runlengths_succ, runlengths_unsucc, percentiles, samplesize<font color="#909090">=1000.0</font>)</dt><dd><tt>Returns&nbsp;the&nbsp;percentiles&nbsp;of&nbsp;the&nbsp;bootstrap&nbsp;distribution&nbsp;of&nbsp;'simulated'&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;running&nbsp;lengths&nbsp;of&nbsp;successful&nbsp;runs.<br>
+Input:<br>
+&nbsp;&nbsp;runlengths_succ--array&nbsp;of&nbsp;running&nbsp;lengths&nbsp;of&nbsp;successful&nbsp;runs<br>
+&nbsp;&nbsp;runlengths_unsucc--array&nbsp;of&nbsp;running&nbsp;lengths&nbsp;of&nbsp;unsuccessful&nbsp;runs<br>
+Return:<br>
+&nbsp;&nbsp;&nbsp;(percentiles,&nbsp;all_sampled_values_sorted)<br>
+Details:<br>
+&nbsp;&nbsp;&nbsp;A&nbsp;single&nbsp;successful&nbsp;running&nbsp;length&nbsp;is&nbsp;computed&nbsp;by&nbsp;adding&nbsp;uniformly<br>
+&nbsp;&nbsp;&nbsp;randomly&nbsp;chosen&nbsp;running&nbsp;lengths&nbsp;until&nbsp;the&nbsp;first&nbsp;time&nbsp;a&nbsp;successful&nbsp;one&nbsp;is<br>
+&nbsp;&nbsp;&nbsp;chosen.&nbsp;In&nbsp;case&nbsp;of&nbsp;no&nbsp;successful&nbsp;run&nbsp;the&nbsp;sum&nbsp;of&nbsp;unsuccessful&nbsp;runs&nbsp;is<br>
+&nbsp;&nbsp;&nbsp;bootstrapped.</tt></dd></dl>
+ <dl><dt><a name="-fastsort"><strong>fastsort</strong></a>(a)</dt><dd><tt>Sort&nbsp;an&nbsp;array&nbsp;and&nbsp;provide&nbsp;the&nbsp;argsort.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+a&nbsp;:&nbsp;array<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+(sorted&nbsp;array,<br>
+&nbsp;indices&nbsp;into&nbsp;the&nbsp;original&nbsp;array,<br>
+)</tt></dd></dl>
+ <dl><dt><a name="-prctile"><strong>prctile</strong></a>(x, arrprctiles, issorted<font color="#909090">=False</font>)</dt><dd><tt>prctile&nbsp;--&nbsp;computes&nbsp;percentile&nbsp;based&nbsp;on&nbsp;data&nbsp;with&nbsp;linear&nbsp;interpolation<br>
+:Calling&nbsp;Sequence:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-prctile">prctile</a>(data,&nbsp;prctiles,&nbsp;issorted=False)<br>
+:Arguments:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;--&nbsp;a&nbsp;sequence&nbsp;(list,&nbsp;array)&nbsp;of&nbsp;data&nbsp;values<br>
+&nbsp;&nbsp;&nbsp;&nbsp;prctiles&nbsp;--&nbsp;a&nbsp;scalar&nbsp;or&nbsp;a&nbsp;sequence&nbsp;of&nbsp;pertentiles&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;be&nbsp;calculated.&nbsp;Values&nbsp;beyond&nbsp;the&nbsp;interval&nbsp;[0,100]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;also&nbsp;return&nbsp;the&nbsp;respective&nbsp;extreme&nbsp;value&nbsp;in&nbsp;data.&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;issorted&nbsp;--&nbsp;indicate&nbsp;if&nbsp;data&nbsp;is&nbsp;sorted<br>
+:Return:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sequence&nbsp;of&nbsp;percentile&nbsp;values&nbsp;in&nbsp;data&nbsp;according&nbsp;to&nbsp;argument<br>
+&nbsp;&nbsp;&nbsp;&nbsp;prctiles<br>
+:Remark:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;treats&nbsp;numpy.Inf&nbsp;and&nbsp;-numpy.Inf&nbsp;and&nbsp;numpy.NaN,&nbsp;the&nbsp;latter&nbsp;are<br>
+&nbsp;&nbsp;&nbsp;&nbsp;simply&nbsp;disregarded</tt></dd></dl>
+ <dl><dt><a name="-randint"><strong>randint</strong></a>(upper, n)</dt></dl>
+ <dl><dt><a name="-rankdata"><strong>rankdata</strong></a>(a)</dt><dd><tt>Ranks&nbsp;the&nbsp;data&nbsp;in&nbsp;a,&nbsp;dealing&nbsp;with&nbsp;ties&nbsp;appropriately.<br>
+&nbsp;<br>
+Equal&nbsp;values&nbsp;are&nbsp;assigned&nbsp;a&nbsp;rank&nbsp;that&nbsp;is&nbsp;the&nbsp;average&nbsp;of&nbsp;the&nbsp;ranks&nbsp;that<br>
+would&nbsp;have&nbsp;been&nbsp;otherwise&nbsp;assigned&nbsp;to&nbsp;all&nbsp;of&nbsp;the&nbsp;values&nbsp;within&nbsp;that&nbsp;set.<br>
+Ranks&nbsp;begin&nbsp;at&nbsp;1,&nbsp;not&nbsp;0.<br>
+&nbsp;<br>
+Example<br>
+-------<br>
+In&nbsp;[15]:&nbsp;stats.<a href="#-rankdata">rankdata</a>([0,&nbsp;2,&nbsp;2,&nbsp;3])<br>
+Out[15]:&nbsp;array([&nbsp;1.&nbsp;,&nbsp;&nbsp;2.5,&nbsp;&nbsp;2.5,&nbsp;&nbsp;4.&nbsp;])<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+a&nbsp;:&nbsp;array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;array&nbsp;is&nbsp;first&nbsp;flattened.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+An&nbsp;array&nbsp;of&nbsp;length&nbsp;equal&nbsp;to&nbsp;the&nbsp;size&nbsp;of&nbsp;a,&nbsp;containing&nbsp;rank&nbsp;scores.</tt></dd></dl>
+ <dl><dt><a name="-ranksums"><strong>ranksums</strong></a>(x, y)</dt><dd><tt>Calculates&nbsp;the&nbsp;rank&nbsp;sums&nbsp;statistic&nbsp;on&nbsp;the&nbsp;provided&nbsp;scores&nbsp;and<br>
+returns&nbsp;the&nbsp;result.<br>
+This&nbsp;method&nbsp;returns&nbsp;a&nbsp;slight&nbsp;difference&nbsp;compared&nbsp;to&nbsp;scipy.stats.ranksums<br>
+in&nbsp;the&nbsp;two-tailed&nbsp;p-value.&nbsp;Should&nbsp;be&nbsp;test&nbsp;drived...<br>
+&nbsp;<br>
+Returns:&nbsp;z-statistic,&nbsp;two-tailed&nbsp;p-value</tt></dd></dl>
+ <dl><dt><a name="-ranksumtest"><strong>ranksumtest</strong></a>(N1, N2)</dt><dd><tt>Custom&nbsp;rank-sum&nbsp;(Mann-Whitney-Wilcoxon)&nbsp;test<br>
+<a href="http://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U">http://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U</a><br>
+Small&nbsp;sample&nbsp;sizes&nbsp;(direct&nbsp;method).<br>
+Keyword&nbsp;arguments:<br>
+N1&nbsp;&nbsp;&nbsp;&nbsp;sample&nbsp;1<br>
+N2&nbsp;&nbsp;&nbsp;&nbsp;sample&nbsp;2</tt></dd></dl>
+ <dl><dt><a name="-sp"><strong>sp</strong></a>(data, maxvalue<font color="#909090">=inf</font>, issuccessful<font color="#909090">=None</font>, allowinf<font color="#909090">=True</font>)</dt><dd><tt><a href="#-sp">sp</a>(data,&nbsp;issuccessful=None)&nbsp;computes&nbsp;the&nbsp;sum&nbsp;of&nbsp;the&nbsp;function&nbsp;evaluations<br>
+over&nbsp;all&nbsp;runs&nbsp;divided&nbsp;by&nbsp;the&nbsp;number&nbsp;of&nbsp;success,&nbsp;the&nbsp;so-called&nbsp;SP.<br>
+&nbsp;<br>
+Input:<br>
+&nbsp;&nbsp;data&nbsp;--&nbsp;array&nbsp;contains,&nbsp;e.g.,&nbsp;number&nbsp;of&nbsp;function<br>
+&nbsp;&nbsp;&nbsp;&nbsp;evaluations&nbsp;to&nbsp;reach&nbsp;the&nbsp;target&nbsp;value<br>
+&nbsp;&nbsp;maxvalue&nbsp;--&nbsp;number,&nbsp;if&nbsp;issuccessful&nbsp;is&nbsp;not&nbsp;provided,&nbsp;data[i]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;is&nbsp;defined&nbsp;successful&nbsp;if&nbsp;it&nbsp;is&nbsp;truly&nbsp;smaller&nbsp;than&nbsp;maxvalue<br>
+&nbsp;&nbsp;issuccessful&nbsp;--&nbsp;None&nbsp;or&nbsp;array&nbsp;of&nbsp;same&nbsp;length&nbsp;as&nbsp;data.&nbsp;Entry<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i&nbsp;in&nbsp;data&nbsp;is&nbsp;defined&nbsp;successful,&nbsp;if&nbsp;issuccessful[i]&nbsp;is<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;True&nbsp;or&nbsp;non-zero<br>
+&nbsp;&nbsp;allowinf&nbsp;--&nbsp;If&nbsp;False,&nbsp;replace&nbsp;inf&nbsp;output&nbsp;(in&nbsp;case&nbsp;of&nbsp;no&nbsp;success)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with&nbsp;the&nbsp;sum&nbsp;of&nbsp;function&nbsp;evaluations.<br>
+&nbsp;<br>
+Returns:&nbsp;(SP,&nbsp;success_rate,&nbsp;nb_of_successful_entries),&nbsp;where&nbsp;SP&nbsp;is&nbsp;the&nbsp;sum<br>
+&nbsp;&nbsp;of&nbsp;successful&nbsp;entries&nbsp;in&nbsp;data&nbsp;divided&nbsp;by&nbsp;the&nbsp;number&nbsp;of&nbsp;success.</tt></dd></dl>
+ <dl><dt><a name="-sp1"><strong>sp1</strong></a>(data, maxvalue<font color="#909090">=inf</font>, issuccessful<font color="#909090">=None</font>)</dt><dd><tt><a href="#-sp1">sp1</a>(data,&nbsp;maxvalue=Inf,&nbsp;issuccessful=None)&nbsp;computes&nbsp;a<br>
+mean&nbsp;value&nbsp;over&nbsp;successful&nbsp;entries&nbsp;in&nbsp;data&nbsp;divided&nbsp;by<br>
+success&nbsp;rate,&nbsp;the&nbsp;so-called&nbsp;SP1<br>
+&nbsp;<br>
+Input:<br>
+&nbsp;&nbsp;data&nbsp;--&nbsp;array&nbsp;contains,&nbsp;e.g.,&nbsp;number&nbsp;of&nbsp;function<br>
+&nbsp;&nbsp;&nbsp;&nbsp;evaluations&nbsp;to&nbsp;reach&nbsp;the&nbsp;target&nbsp;value<br>
+&nbsp;&nbsp;maxvalue&nbsp;--&nbsp;number,&nbsp;if&nbsp;issuccessful&nbsp;is&nbsp;not&nbsp;provided,&nbsp;data[i]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;is&nbsp;defined&nbsp;successful&nbsp;if&nbsp;it&nbsp;is&nbsp;truly&nbsp;smaller&nbsp;than&nbsp;maxvalue<br>
+&nbsp;&nbsp;issuccessful&nbsp;--&nbsp;None&nbsp;or&nbsp;array&nbsp;of&nbsp;same&nbsp;length&nbsp;as&nbsp;data.&nbsp;Entry<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i&nbsp;in&nbsp;data&nbsp;is&nbsp;defined&nbsp;successful,&nbsp;if&nbsp;issuccessful[i]&nbsp;is<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;True&nbsp;or&nbsp;non-zero&nbsp;<br>
+&nbsp;<br>
+Returns:&nbsp;(SP1,&nbsp;success_rate,&nbsp;nb_of_successful_entries),&nbsp;where<br>
+&nbsp;&nbsp;SP1&nbsp;is&nbsp;the&nbsp;mean&nbsp;over&nbsp;successful&nbsp;entries&nbsp;in&nbsp;data&nbsp;divided<br>
+&nbsp;&nbsp;by&nbsp;the&nbsp;success&nbsp;rate.&nbsp;SP1&nbsp;equals&nbsp;numpy.Inf&nbsp;when&nbsp;the&nbsp;success<br>
+&nbsp;&nbsp;rate&nbsp;is&nbsp;zero.</tt></dd></dl>
+ <dl><dt><a name="-zprob"><strong>zprob</strong></a>(z)</dt><dd><tt>Returns&nbsp;the&nbsp;area&nbsp;under&nbsp;the&nbsp;normal&nbsp;curve&nbsp;'to&nbsp;the&nbsp;left&nbsp;of'&nbsp;the&nbsp;given&nbsp;z&nbsp;value.<br>
+<a href="http://www.nmr.mgh.harvard.edu/Neural_Systems_Group/gary/python.html">http://www.nmr.mgh.harvard.edu/Neural_Systems_Group/gary/python.html</a><br>
+Thus,&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;z&lt;0,&nbsp;<a href="#-zprob">zprob</a>(z)&nbsp;=&nbsp;1-tail&nbsp;probability<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;z&gt;0,&nbsp;1.0-<a href="#-zprob">zprob</a>(z)&nbsp;=&nbsp;1-tail&nbsp;probability<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;any&nbsp;z,&nbsp;2.0*(1.0-<a href="#-zprob">zprob</a>(abs(z)))&nbsp;=&nbsp;2-tail&nbsp;probability<br>
+Adapted&nbsp;from&nbsp;z.c&nbsp;in&nbsp;Gary&nbsp;Perlman's&nbsp;|Stat.&nbsp;&nbsp;Can&nbsp;handle&nbsp;multiple&nbsp;dimensions.<br>
+&nbsp;<br>
+Usage:&nbsp;&nbsp;&nbsp;azprob(z)&nbsp;&nbsp;&nbsp;&nbsp;where&nbsp;z&nbsp;is&nbsp;a&nbsp;z-value</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__package__</strong> = 'bbob_pproc'</td></tr></table>
+</body></html>

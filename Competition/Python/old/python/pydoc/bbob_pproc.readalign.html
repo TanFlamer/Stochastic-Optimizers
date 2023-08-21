@@ -1,0 +1,901 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module bbob_pproc.readalign</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="bbob_pproc.html"><font color="#ffffff">bbob_pproc</font></a>.readalign</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">&nbsp;</font></td></tr></table>
+    <p><tt>Helper&nbsp;routines&nbsp;to&nbsp;read&nbsp;in&nbsp;data&nbsp;files.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="warnings.html">warnings</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#list">__builtin__.list</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="bbob_pproc.readalign.html#ArrayMultiReader">ArrayMultiReader</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="bbob_pproc.readalign.html#HArrayMultiReader">HArrayMultiReader</a>(<a href="bbob_pproc.readalign.html#ArrayMultiReader">ArrayMultiReader</a>, <a href="bbob_pproc.readalign.html#HMultiReader">HMultiReader</a>)
+</font></dt><dt><font face="helvetica, arial"><a href="bbob_pproc.readalign.html#VArrayMultiReader">VArrayMultiReader</a>(<a href="bbob_pproc.readalign.html#ArrayMultiReader">ArrayMultiReader</a>, <a href="bbob_pproc.readalign.html#VMultiReader">VMultiReader</a>)
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="bbob_pproc.readalign.html#HMultiReader">HMultiReader</a>
+</font></dt><dt><font face="helvetica, arial"><a href="bbob_pproc.readalign.html#VMultiReader">VMultiReader</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ArrayMultiReader">class <strong>ArrayMultiReader</strong></a>(<a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Class&nbsp;of&nbsp;ALIGNED&nbsp;data&nbsp;arrays&nbsp;to&nbsp;be&nbsp;aligned&nbsp;together.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="bbob_pproc.readalign.html#ArrayMultiReader">ArrayMultiReader</a></dd>
+<dd><a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a></dd>
+<dd><a href="__builtin__.html#list">__builtin__.list</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ArrayMultiReader-__init__"><strong>__init__</strong></a>(self, data, isHArray<font color="#909090">=False</font>)</dt></dl>
+
+<dl><dt><a name="ArrayMultiReader-currentLine"><strong>currentLine</strong></a>(self)</dt><dd><tt>Aggregates&nbsp;currentLines&nbsp;information.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>idx</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a>:<br>
+<dl><dt><a name="ArrayMultiReader-currentValues"><strong>currentValues</strong></a>(self)</dt><dd><tt>Gets&nbsp;the&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;of&nbsp;the&nbsp;current&nbsp;alignment&nbsp;values.</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-nextValues"><strong>nextValues</strong></a>(self)</dt><dd><tt>Gets&nbsp;the&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;of&nbsp;the&nbsp;next&nbsp;alignment&nbsp;values.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a>:<br>
+<dl><dt><strong>SingleReader</strong> = &lt;class bbob_pproc.readalign.SingleReader at 0xa68dd4c&gt;<dd><tt>Single&nbsp;data&nbsp;array&nbsp;reader&nbsp;class.</tt></dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#list">__builtin__.list</a>:<br>
+<dl><dt><a name="ArrayMultiReader-__add__"><strong>__add__</strong></a>(...)</dt><dd><tt>x.<a href="#ArrayMultiReader-__add__">__add__</a>(y)&nbsp;&lt;==&gt;&nbsp;x+y</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__contains__"><strong>__contains__</strong></a>(...)</dt><dd><tt>x.<a href="#ArrayMultiReader-__contains__">__contains__</a>(y)&nbsp;&lt;==&gt;&nbsp;y&nbsp;in&nbsp;x</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__delitem__"><strong>__delitem__</strong></a>(...)</dt><dd><tt>x.<a href="#ArrayMultiReader-__delitem__">__delitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;del&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__delslice__"><strong>__delslice__</strong></a>(...)</dt><dd><tt>x.<a href="#ArrayMultiReader-__delslice__">__delslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;del&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__eq__"><strong>__eq__</strong></a>(...)</dt><dd><tt>x.<a href="#ArrayMultiReader-__eq__">__eq__</a>(y)&nbsp;&lt;==&gt;&nbsp;x==y</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__ge__"><strong>__ge__</strong></a>(...)</dt><dd><tt>x.<a href="#ArrayMultiReader-__ge__">__ge__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;=y</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#ArrayMultiReader-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#ArrayMultiReader-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#ArrayMultiReader-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__gt__"><strong>__gt__</strong></a>(...)</dt><dd><tt>x.<a href="#ArrayMultiReader-__gt__">__gt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;y</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__iadd__"><strong>__iadd__</strong></a>(...)</dt><dd><tt>x.<a href="#ArrayMultiReader-__iadd__">__iadd__</a>(y)&nbsp;&lt;==&gt;&nbsp;x+=y</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__imul__"><strong>__imul__</strong></a>(...)</dt><dd><tt>x.<a href="#ArrayMultiReader-__imul__">__imul__</a>(y)&nbsp;&lt;==&gt;&nbsp;x*=y</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__iter__"><strong>__iter__</strong></a>(...)</dt><dd><tt>x.<a href="#ArrayMultiReader-__iter__">__iter__</a>()&nbsp;&lt;==&gt;&nbsp;iter(x)</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__le__"><strong>__le__</strong></a>(...)</dt><dd><tt>x.<a href="#ArrayMultiReader-__le__">__le__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;=y</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__len__"><strong>__len__</strong></a>(...)</dt><dd><tt>x.<a href="#ArrayMultiReader-__len__">__len__</a>()&nbsp;&lt;==&gt;&nbsp;len(x)</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__lt__"><strong>__lt__</strong></a>(...)</dt><dd><tt>x.<a href="#ArrayMultiReader-__lt__">__lt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;y</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__mul__"><strong>__mul__</strong></a>(...)</dt><dd><tt>x.<a href="#ArrayMultiReader-__mul__">__mul__</a>(n)&nbsp;&lt;==&gt;&nbsp;x*n</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__ne__"><strong>__ne__</strong></a>(...)</dt><dd><tt>x.<a href="#ArrayMultiReader-__ne__">__ne__</a>(y)&nbsp;&lt;==&gt;&nbsp;x!=y</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#ArrayMultiReader-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__reversed__"><strong>__reversed__</strong></a>(...)</dt><dd><tt>L.<a href="#ArrayMultiReader-__reversed__">__reversed__</a>()&nbsp;--&nbsp;return&nbsp;a&nbsp;reverse&nbsp;iterator&nbsp;over&nbsp;the&nbsp;<a href="__builtin__.html#list">list</a></tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__rmul__"><strong>__rmul__</strong></a>(...)</dt><dd><tt>x.<a href="#ArrayMultiReader-__rmul__">__rmul__</a>(n)&nbsp;&lt;==&gt;&nbsp;n*x</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__setitem__"><strong>__setitem__</strong></a>(...)</dt><dd><tt>x.<a href="#ArrayMultiReader-__setitem__">__setitem__</a>(i,&nbsp;y)&nbsp;&lt;==&gt;&nbsp;x[i]=y</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__setslice__"><strong>__setslice__</strong></a>(...)</dt><dd><tt>x.<a href="#ArrayMultiReader-__setslice__">__setslice__</a>(i,&nbsp;j,&nbsp;y)&nbsp;&lt;==&gt;&nbsp;x[i:j]=y<br>
+&nbsp;<br>
+Use&nbsp;&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-__sizeof__"><strong>__sizeof__</strong></a>(...)</dt><dd><tt>L.<a href="#ArrayMultiReader-__sizeof__">__sizeof__</a>()&nbsp;--&nbsp;size&nbsp;of&nbsp;L&nbsp;in&nbsp;memory,&nbsp;in&nbsp;bytes</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-append"><strong>append</strong></a>(...)</dt><dd><tt>L.<a href="#ArrayMultiReader-append">append</a>(object)&nbsp;--&nbsp;append&nbsp;object&nbsp;to&nbsp;end</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-count"><strong>count</strong></a>(...)</dt><dd><tt>L.<a href="#ArrayMultiReader-count">count</a>(value)&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;number&nbsp;of&nbsp;occurrences&nbsp;of&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-extend"><strong>extend</strong></a>(...)</dt><dd><tt>L.<a href="#ArrayMultiReader-extend">extend</a>(iterable)&nbsp;--&nbsp;extend&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;by&nbsp;appending&nbsp;elements&nbsp;from&nbsp;the&nbsp;iterable</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-index"><strong>index</strong></a>(...)</dt><dd><tt>L.<a href="#ArrayMultiReader-index">index</a>(value,&nbsp;[start,&nbsp;[stop]])&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;first&nbsp;index&nbsp;of&nbsp;value.<br>
+Raises&nbsp;ValueError&nbsp;if&nbsp;the&nbsp;value&nbsp;is&nbsp;not&nbsp;present.</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-insert"><strong>insert</strong></a>(...)</dt><dd><tt>L.<a href="#ArrayMultiReader-insert">insert</a>(index,&nbsp;object)&nbsp;--&nbsp;insert&nbsp;object&nbsp;before&nbsp;index</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-pop"><strong>pop</strong></a>(...)</dt><dd><tt>L.<a href="#ArrayMultiReader-pop">pop</a>([index])&nbsp;-&gt;&nbsp;item&nbsp;--&nbsp;remove&nbsp;and&nbsp;return&nbsp;item&nbsp;at&nbsp;index&nbsp;(default&nbsp;last).<br>
+Raises&nbsp;IndexError&nbsp;if&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;is&nbsp;empty&nbsp;or&nbsp;index&nbsp;is&nbsp;out&nbsp;of&nbsp;range.</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-remove"><strong>remove</strong></a>(...)</dt><dd><tt>L.<a href="#ArrayMultiReader-remove">remove</a>(value)&nbsp;--&nbsp;remove&nbsp;first&nbsp;occurrence&nbsp;of&nbsp;value.<br>
+Raises&nbsp;ValueError&nbsp;if&nbsp;the&nbsp;value&nbsp;is&nbsp;not&nbsp;present.</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-reverse"><strong>reverse</strong></a>(...)</dt><dd><tt>L.<a href="#ArrayMultiReader-reverse">reverse</a>()&nbsp;--&nbsp;reverse&nbsp;*IN&nbsp;PLACE*</tt></dd></dl>
+
+<dl><dt><a name="ArrayMultiReader-sort"><strong>sort</strong></a>(...)</dt><dd><tt>L.<a href="#ArrayMultiReader-sort">sort</a>(cmp=None,&nbsp;key=None,&nbsp;reverse=False)&nbsp;--&nbsp;stable&nbsp;sort&nbsp;*IN&nbsp;PLACE*;<br>
+cmp(x,&nbsp;y)&nbsp;-&gt;&nbsp;-1,&nbsp;0,&nbsp;1</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="__builtin__.html#list">__builtin__.list</a>:<br>
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object at 0x822be40&gt;<dd><tt>T.<a href="#ArrayMultiReader-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;object&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="HArrayMultiReader">class <strong>HArrayMultiReader</strong></a>(<a href="bbob_pproc.readalign.html#ArrayMultiReader">ArrayMultiReader</a>, <a href="bbob_pproc.readalign.html#HMultiReader">HMultiReader</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Wrapper&nbsp;class&nbsp;of&nbsp;ALIGNED&nbsp;data&nbsp;arrays&nbsp;to&nbsp;be&nbsp;aligned&nbsp;horizontally.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="bbob_pproc.readalign.html#HArrayMultiReader">HArrayMultiReader</a></dd>
+<dd><a href="bbob_pproc.readalign.html#ArrayMultiReader">ArrayMultiReader</a></dd>
+<dd><a href="bbob_pproc.readalign.html#HMultiReader">HMultiReader</a></dd>
+<dd><a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a></dd>
+<dd><a href="__builtin__.html#list">__builtin__.list</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="HArrayMultiReader-__init__"><strong>__init__</strong></a>(self, data)</dt></dl>
+
+<hr>
+Methods inherited from <a href="bbob_pproc.readalign.html#ArrayMultiReader">ArrayMultiReader</a>:<br>
+<dl><dt><a name="HArrayMultiReader-currentLine"><strong>currentLine</strong></a>(self)</dt><dd><tt>Aggregates&nbsp;currentLines&nbsp;information.</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="bbob_pproc.readalign.html#ArrayMultiReader">ArrayMultiReader</a>:<br>
+<dl><dt><strong>idx</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="bbob_pproc.readalign.html#HMultiReader">HMultiReader</a>:<br>
+<dl><dt><a name="HArrayMultiReader-align"><strong>align</strong></a>(self, currentValue)</dt></dl>
+
+<dl><dt><a name="HArrayMultiReader-getInitialValue"><strong>getInitialValue</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="HArrayMultiReader-isFinished"><strong>isFinished</strong></a>(self)</dt><dd><tt>Is&nbsp;finished&nbsp;when&nbsp;we&nbsp;found&nbsp;the&nbsp;last&nbsp;alignment&nbsp;value&nbsp;reached.</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-newCurrentValue"><strong>newCurrentValue</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="bbob_pproc.readalign.html#HMultiReader">HMultiReader</a>:<br>
+<dl><dt><strong>idxData</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a>:<br>
+<dl><dt><a name="HArrayMultiReader-currentValues"><strong>currentValues</strong></a>(self)</dt><dd><tt>Gets&nbsp;the&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;of&nbsp;the&nbsp;current&nbsp;alignment&nbsp;values.</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-nextValues"><strong>nextValues</strong></a>(self)</dt><dd><tt>Gets&nbsp;the&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;of&nbsp;the&nbsp;next&nbsp;alignment&nbsp;values.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a>:<br>
+<dl><dt><strong>SingleReader</strong> = &lt;class bbob_pproc.readalign.SingleReader at 0xa68dd4c&gt;<dd><tt>Single&nbsp;data&nbsp;array&nbsp;reader&nbsp;class.</tt></dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#list">__builtin__.list</a>:<br>
+<dl><dt><a name="HArrayMultiReader-__add__"><strong>__add__</strong></a>(...)</dt><dd><tt>x.<a href="#HArrayMultiReader-__add__">__add__</a>(y)&nbsp;&lt;==&gt;&nbsp;x+y</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__contains__"><strong>__contains__</strong></a>(...)</dt><dd><tt>x.<a href="#HArrayMultiReader-__contains__">__contains__</a>(y)&nbsp;&lt;==&gt;&nbsp;y&nbsp;in&nbsp;x</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__delitem__"><strong>__delitem__</strong></a>(...)</dt><dd><tt>x.<a href="#HArrayMultiReader-__delitem__">__delitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;del&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__delslice__"><strong>__delslice__</strong></a>(...)</dt><dd><tt>x.<a href="#HArrayMultiReader-__delslice__">__delslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;del&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__eq__"><strong>__eq__</strong></a>(...)</dt><dd><tt>x.<a href="#HArrayMultiReader-__eq__">__eq__</a>(y)&nbsp;&lt;==&gt;&nbsp;x==y</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__ge__"><strong>__ge__</strong></a>(...)</dt><dd><tt>x.<a href="#HArrayMultiReader-__ge__">__ge__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;=y</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#HArrayMultiReader-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#HArrayMultiReader-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#HArrayMultiReader-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__gt__"><strong>__gt__</strong></a>(...)</dt><dd><tt>x.<a href="#HArrayMultiReader-__gt__">__gt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;y</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__iadd__"><strong>__iadd__</strong></a>(...)</dt><dd><tt>x.<a href="#HArrayMultiReader-__iadd__">__iadd__</a>(y)&nbsp;&lt;==&gt;&nbsp;x+=y</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__imul__"><strong>__imul__</strong></a>(...)</dt><dd><tt>x.<a href="#HArrayMultiReader-__imul__">__imul__</a>(y)&nbsp;&lt;==&gt;&nbsp;x*=y</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__iter__"><strong>__iter__</strong></a>(...)</dt><dd><tt>x.<a href="#HArrayMultiReader-__iter__">__iter__</a>()&nbsp;&lt;==&gt;&nbsp;iter(x)</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__le__"><strong>__le__</strong></a>(...)</dt><dd><tt>x.<a href="#HArrayMultiReader-__le__">__le__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;=y</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__len__"><strong>__len__</strong></a>(...)</dt><dd><tt>x.<a href="#HArrayMultiReader-__len__">__len__</a>()&nbsp;&lt;==&gt;&nbsp;len(x)</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__lt__"><strong>__lt__</strong></a>(...)</dt><dd><tt>x.<a href="#HArrayMultiReader-__lt__">__lt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;y</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__mul__"><strong>__mul__</strong></a>(...)</dt><dd><tt>x.<a href="#HArrayMultiReader-__mul__">__mul__</a>(n)&nbsp;&lt;==&gt;&nbsp;x*n</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__ne__"><strong>__ne__</strong></a>(...)</dt><dd><tt>x.<a href="#HArrayMultiReader-__ne__">__ne__</a>(y)&nbsp;&lt;==&gt;&nbsp;x!=y</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#HArrayMultiReader-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__reversed__"><strong>__reversed__</strong></a>(...)</dt><dd><tt>L.<a href="#HArrayMultiReader-__reversed__">__reversed__</a>()&nbsp;--&nbsp;return&nbsp;a&nbsp;reverse&nbsp;iterator&nbsp;over&nbsp;the&nbsp;<a href="__builtin__.html#list">list</a></tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__rmul__"><strong>__rmul__</strong></a>(...)</dt><dd><tt>x.<a href="#HArrayMultiReader-__rmul__">__rmul__</a>(n)&nbsp;&lt;==&gt;&nbsp;n*x</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__setitem__"><strong>__setitem__</strong></a>(...)</dt><dd><tt>x.<a href="#HArrayMultiReader-__setitem__">__setitem__</a>(i,&nbsp;y)&nbsp;&lt;==&gt;&nbsp;x[i]=y</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__setslice__"><strong>__setslice__</strong></a>(...)</dt><dd><tt>x.<a href="#HArrayMultiReader-__setslice__">__setslice__</a>(i,&nbsp;j,&nbsp;y)&nbsp;&lt;==&gt;&nbsp;x[i:j]=y<br>
+&nbsp;<br>
+Use&nbsp;&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-__sizeof__"><strong>__sizeof__</strong></a>(...)</dt><dd><tt>L.<a href="#HArrayMultiReader-__sizeof__">__sizeof__</a>()&nbsp;--&nbsp;size&nbsp;of&nbsp;L&nbsp;in&nbsp;memory,&nbsp;in&nbsp;bytes</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-append"><strong>append</strong></a>(...)</dt><dd><tt>L.<a href="#HArrayMultiReader-append">append</a>(object)&nbsp;--&nbsp;append&nbsp;object&nbsp;to&nbsp;end</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-count"><strong>count</strong></a>(...)</dt><dd><tt>L.<a href="#HArrayMultiReader-count">count</a>(value)&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;number&nbsp;of&nbsp;occurrences&nbsp;of&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-extend"><strong>extend</strong></a>(...)</dt><dd><tt>L.<a href="#HArrayMultiReader-extend">extend</a>(iterable)&nbsp;--&nbsp;extend&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;by&nbsp;appending&nbsp;elements&nbsp;from&nbsp;the&nbsp;iterable</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-index"><strong>index</strong></a>(...)</dt><dd><tt>L.<a href="#HArrayMultiReader-index">index</a>(value,&nbsp;[start,&nbsp;[stop]])&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;first&nbsp;index&nbsp;of&nbsp;value.<br>
+Raises&nbsp;ValueError&nbsp;if&nbsp;the&nbsp;value&nbsp;is&nbsp;not&nbsp;present.</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-insert"><strong>insert</strong></a>(...)</dt><dd><tt>L.<a href="#HArrayMultiReader-insert">insert</a>(index,&nbsp;object)&nbsp;--&nbsp;insert&nbsp;object&nbsp;before&nbsp;index</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-pop"><strong>pop</strong></a>(...)</dt><dd><tt>L.<a href="#HArrayMultiReader-pop">pop</a>([index])&nbsp;-&gt;&nbsp;item&nbsp;--&nbsp;remove&nbsp;and&nbsp;return&nbsp;item&nbsp;at&nbsp;index&nbsp;(default&nbsp;last).<br>
+Raises&nbsp;IndexError&nbsp;if&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;is&nbsp;empty&nbsp;or&nbsp;index&nbsp;is&nbsp;out&nbsp;of&nbsp;range.</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-remove"><strong>remove</strong></a>(...)</dt><dd><tt>L.<a href="#HArrayMultiReader-remove">remove</a>(value)&nbsp;--&nbsp;remove&nbsp;first&nbsp;occurrence&nbsp;of&nbsp;value.<br>
+Raises&nbsp;ValueError&nbsp;if&nbsp;the&nbsp;value&nbsp;is&nbsp;not&nbsp;present.</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-reverse"><strong>reverse</strong></a>(...)</dt><dd><tt>L.<a href="#HArrayMultiReader-reverse">reverse</a>()&nbsp;--&nbsp;reverse&nbsp;*IN&nbsp;PLACE*</tt></dd></dl>
+
+<dl><dt><a name="HArrayMultiReader-sort"><strong>sort</strong></a>(...)</dt><dd><tt>L.<a href="#HArrayMultiReader-sort">sort</a>(cmp=None,&nbsp;key=None,&nbsp;reverse=False)&nbsp;--&nbsp;stable&nbsp;sort&nbsp;*IN&nbsp;PLACE*;<br>
+cmp(x,&nbsp;y)&nbsp;-&gt;&nbsp;-1,&nbsp;0,&nbsp;1</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="__builtin__.html#list">__builtin__.list</a>:<br>
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object at 0x822be40&gt;<dd><tt>T.<a href="#HArrayMultiReader-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;object&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="HMultiReader">class <strong>HMultiReader</strong></a>(<a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>List&nbsp;of&nbsp;data&nbsp;arrays&nbsp;to&nbsp;be&nbsp;aligned&nbsp;horizontally.<br>
+&nbsp;<br>
+Aligned&nbsp;horizontally&nbsp;means&nbsp;all&nbsp;the&nbsp;function&nbsp;values&nbsp;are&nbsp;lesser&nbsp;than&nbsp;(or<br>
+equal&nbsp;to)&nbsp;the&nbsp;current&nbsp;alignment&nbsp;function&nbsp;value.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="bbob_pproc.readalign.html#HMultiReader">HMultiReader</a></dd>
+<dd><a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a></dd>
+<dd><a href="__builtin__.html#list">__builtin__.list</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="HMultiReader-__init__"><strong>__init__</strong></a>(self, data)</dt></dl>
+
+<dl><dt><a name="HMultiReader-align"><strong>align</strong></a>(self, currentValue)</dt></dl>
+
+<dl><dt><a name="HMultiReader-getInitialValue"><strong>getInitialValue</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="HMultiReader-isFinished"><strong>isFinished</strong></a>(self)</dt><dd><tt>Is&nbsp;finished&nbsp;when&nbsp;we&nbsp;found&nbsp;the&nbsp;last&nbsp;alignment&nbsp;value&nbsp;reached.</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-newCurrentValue"><strong>newCurrentValue</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>idx</strong> = 2</dl>
+
+<dl><dt><strong>idxData</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a>:<br>
+<dl><dt><a name="HMultiReader-currentLine"><strong>currentLine</strong></a>(self)</dt><dd><tt>Aggregates&nbsp;currentLines&nbsp;information.</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-currentValues"><strong>currentValues</strong></a>(self)</dt><dd><tt>Gets&nbsp;the&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;of&nbsp;the&nbsp;current&nbsp;alignment&nbsp;values.</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-nextValues"><strong>nextValues</strong></a>(self)</dt><dd><tt>Gets&nbsp;the&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;of&nbsp;the&nbsp;next&nbsp;alignment&nbsp;values.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a>:<br>
+<dl><dt><strong>SingleReader</strong> = &lt;class bbob_pproc.readalign.SingleReader at 0xa68dd4c&gt;<dd><tt>Single&nbsp;data&nbsp;array&nbsp;reader&nbsp;class.</tt></dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#list">__builtin__.list</a>:<br>
+<dl><dt><a name="HMultiReader-__add__"><strong>__add__</strong></a>(...)</dt><dd><tt>x.<a href="#HMultiReader-__add__">__add__</a>(y)&nbsp;&lt;==&gt;&nbsp;x+y</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__contains__"><strong>__contains__</strong></a>(...)</dt><dd><tt>x.<a href="#HMultiReader-__contains__">__contains__</a>(y)&nbsp;&lt;==&gt;&nbsp;y&nbsp;in&nbsp;x</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__delitem__"><strong>__delitem__</strong></a>(...)</dt><dd><tt>x.<a href="#HMultiReader-__delitem__">__delitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;del&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__delslice__"><strong>__delslice__</strong></a>(...)</dt><dd><tt>x.<a href="#HMultiReader-__delslice__">__delslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;del&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__eq__"><strong>__eq__</strong></a>(...)</dt><dd><tt>x.<a href="#HMultiReader-__eq__">__eq__</a>(y)&nbsp;&lt;==&gt;&nbsp;x==y</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__ge__"><strong>__ge__</strong></a>(...)</dt><dd><tt>x.<a href="#HMultiReader-__ge__">__ge__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;=y</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#HMultiReader-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#HMultiReader-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#HMultiReader-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__gt__"><strong>__gt__</strong></a>(...)</dt><dd><tt>x.<a href="#HMultiReader-__gt__">__gt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;y</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__iadd__"><strong>__iadd__</strong></a>(...)</dt><dd><tt>x.<a href="#HMultiReader-__iadd__">__iadd__</a>(y)&nbsp;&lt;==&gt;&nbsp;x+=y</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__imul__"><strong>__imul__</strong></a>(...)</dt><dd><tt>x.<a href="#HMultiReader-__imul__">__imul__</a>(y)&nbsp;&lt;==&gt;&nbsp;x*=y</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__iter__"><strong>__iter__</strong></a>(...)</dt><dd><tt>x.<a href="#HMultiReader-__iter__">__iter__</a>()&nbsp;&lt;==&gt;&nbsp;iter(x)</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__le__"><strong>__le__</strong></a>(...)</dt><dd><tt>x.<a href="#HMultiReader-__le__">__le__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;=y</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__len__"><strong>__len__</strong></a>(...)</dt><dd><tt>x.<a href="#HMultiReader-__len__">__len__</a>()&nbsp;&lt;==&gt;&nbsp;len(x)</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__lt__"><strong>__lt__</strong></a>(...)</dt><dd><tt>x.<a href="#HMultiReader-__lt__">__lt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;y</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__mul__"><strong>__mul__</strong></a>(...)</dt><dd><tt>x.<a href="#HMultiReader-__mul__">__mul__</a>(n)&nbsp;&lt;==&gt;&nbsp;x*n</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__ne__"><strong>__ne__</strong></a>(...)</dt><dd><tt>x.<a href="#HMultiReader-__ne__">__ne__</a>(y)&nbsp;&lt;==&gt;&nbsp;x!=y</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#HMultiReader-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__reversed__"><strong>__reversed__</strong></a>(...)</dt><dd><tt>L.<a href="#HMultiReader-__reversed__">__reversed__</a>()&nbsp;--&nbsp;return&nbsp;a&nbsp;reverse&nbsp;iterator&nbsp;over&nbsp;the&nbsp;<a href="__builtin__.html#list">list</a></tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__rmul__"><strong>__rmul__</strong></a>(...)</dt><dd><tt>x.<a href="#HMultiReader-__rmul__">__rmul__</a>(n)&nbsp;&lt;==&gt;&nbsp;n*x</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__setitem__"><strong>__setitem__</strong></a>(...)</dt><dd><tt>x.<a href="#HMultiReader-__setitem__">__setitem__</a>(i,&nbsp;y)&nbsp;&lt;==&gt;&nbsp;x[i]=y</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__setslice__"><strong>__setslice__</strong></a>(...)</dt><dd><tt>x.<a href="#HMultiReader-__setslice__">__setslice__</a>(i,&nbsp;j,&nbsp;y)&nbsp;&lt;==&gt;&nbsp;x[i:j]=y<br>
+&nbsp;<br>
+Use&nbsp;&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-__sizeof__"><strong>__sizeof__</strong></a>(...)</dt><dd><tt>L.<a href="#HMultiReader-__sizeof__">__sizeof__</a>()&nbsp;--&nbsp;size&nbsp;of&nbsp;L&nbsp;in&nbsp;memory,&nbsp;in&nbsp;bytes</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-append"><strong>append</strong></a>(...)</dt><dd><tt>L.<a href="#HMultiReader-append">append</a>(object)&nbsp;--&nbsp;append&nbsp;object&nbsp;to&nbsp;end</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-count"><strong>count</strong></a>(...)</dt><dd><tt>L.<a href="#HMultiReader-count">count</a>(value)&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;number&nbsp;of&nbsp;occurrences&nbsp;of&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-extend"><strong>extend</strong></a>(...)</dt><dd><tt>L.<a href="#HMultiReader-extend">extend</a>(iterable)&nbsp;--&nbsp;extend&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;by&nbsp;appending&nbsp;elements&nbsp;from&nbsp;the&nbsp;iterable</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-index"><strong>index</strong></a>(...)</dt><dd><tt>L.<a href="#HMultiReader-index">index</a>(value,&nbsp;[start,&nbsp;[stop]])&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;first&nbsp;index&nbsp;of&nbsp;value.<br>
+Raises&nbsp;ValueError&nbsp;if&nbsp;the&nbsp;value&nbsp;is&nbsp;not&nbsp;present.</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-insert"><strong>insert</strong></a>(...)</dt><dd><tt>L.<a href="#HMultiReader-insert">insert</a>(index,&nbsp;object)&nbsp;--&nbsp;insert&nbsp;object&nbsp;before&nbsp;index</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-pop"><strong>pop</strong></a>(...)</dt><dd><tt>L.<a href="#HMultiReader-pop">pop</a>([index])&nbsp;-&gt;&nbsp;item&nbsp;--&nbsp;remove&nbsp;and&nbsp;return&nbsp;item&nbsp;at&nbsp;index&nbsp;(default&nbsp;last).<br>
+Raises&nbsp;IndexError&nbsp;if&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;is&nbsp;empty&nbsp;or&nbsp;index&nbsp;is&nbsp;out&nbsp;of&nbsp;range.</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-remove"><strong>remove</strong></a>(...)</dt><dd><tt>L.<a href="#HMultiReader-remove">remove</a>(value)&nbsp;--&nbsp;remove&nbsp;first&nbsp;occurrence&nbsp;of&nbsp;value.<br>
+Raises&nbsp;ValueError&nbsp;if&nbsp;the&nbsp;value&nbsp;is&nbsp;not&nbsp;present.</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-reverse"><strong>reverse</strong></a>(...)</dt><dd><tt>L.<a href="#HMultiReader-reverse">reverse</a>()&nbsp;--&nbsp;reverse&nbsp;*IN&nbsp;PLACE*</tt></dd></dl>
+
+<dl><dt><a name="HMultiReader-sort"><strong>sort</strong></a>(...)</dt><dd><tt>L.<a href="#HMultiReader-sort">sort</a>(cmp=None,&nbsp;key=None,&nbsp;reverse=False)&nbsp;--&nbsp;stable&nbsp;sort&nbsp;*IN&nbsp;PLACE*;<br>
+cmp(x,&nbsp;y)&nbsp;-&gt;&nbsp;-1,&nbsp;0,&nbsp;1</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="__builtin__.html#list">__builtin__.list</a>:<br>
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object at 0x822be40&gt;<dd><tt>T.<a href="#HMultiReader-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;object&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MultiReader">class <strong>MultiReader</strong></a>(<a href="__builtin__.html#list">__builtin__.list</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>List&nbsp;of&nbsp;data&nbsp;arrays&nbsp;to&nbsp;be&nbsp;aligned.<br>
+&nbsp;<br>
+The&nbsp;main&nbsp;purpose&nbsp;of&nbsp;this&nbsp;class&nbsp;is&nbsp;to&nbsp;be&nbsp;used&nbsp;as&nbsp;a&nbsp;single&nbsp;container&nbsp;of&nbsp;the<br>
+data&nbsp;arrays&nbsp;to&nbsp;be&nbsp;aligned&nbsp;by&nbsp;the&nbsp;alignData&nbsp;method&nbsp;in&nbsp;the&nbsp;parent&nbsp;module.<br>
+&nbsp;<br>
+This&nbsp;class&nbsp;is&nbsp;part&nbsp;abstract.&nbsp;Some&nbsp;methods&nbsp;have&nbsp;to&nbsp;be&nbsp;defined&nbsp;by&nbsp;inheriting<br>
+classes&nbsp;depending&nbsp;on&nbsp;wanted&nbsp;alignment&nbsp;isFinished,&nbsp;getInitialValue,<br>
+newCurrentValue,&nbsp;align.&nbsp;Some&nbsp;attributes&nbsp;have&nbsp;to&nbsp;be&nbsp;defined&nbsp;as&nbsp;well&nbsp;idx,<br>
+idxData.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a></dd>
+<dd><a href="__builtin__.html#list">__builtin__.list</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="MultiReader-__init__"><strong>__init__</strong></a>(self, data, isHArray<font color="#909090">=False</font>)</dt></dl>
+
+<dl><dt><a name="MultiReader-currentLine"><strong>currentLine</strong></a>(self)</dt><dd><tt>Aggregates&nbsp;currentLines&nbsp;information.</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-currentValues"><strong>currentValues</strong></a>(self)</dt><dd><tt>Gets&nbsp;the&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;of&nbsp;the&nbsp;current&nbsp;alignment&nbsp;values.</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-nextValues"><strong>nextValues</strong></a>(self)</dt><dd><tt>Gets&nbsp;the&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;of&nbsp;the&nbsp;next&nbsp;alignment&nbsp;values.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>SingleReader</strong> = &lt;class bbob_pproc.readalign.SingleReader at 0xa68dd4c&gt;<dd><tt>Single&nbsp;data&nbsp;array&nbsp;reader&nbsp;class.</tt></dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#list">__builtin__.list</a>:<br>
+<dl><dt><a name="MultiReader-__add__"><strong>__add__</strong></a>(...)</dt><dd><tt>x.<a href="#MultiReader-__add__">__add__</a>(y)&nbsp;&lt;==&gt;&nbsp;x+y</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__contains__"><strong>__contains__</strong></a>(...)</dt><dd><tt>x.<a href="#MultiReader-__contains__">__contains__</a>(y)&nbsp;&lt;==&gt;&nbsp;y&nbsp;in&nbsp;x</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__delitem__"><strong>__delitem__</strong></a>(...)</dt><dd><tt>x.<a href="#MultiReader-__delitem__">__delitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;del&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__delslice__"><strong>__delslice__</strong></a>(...)</dt><dd><tt>x.<a href="#MultiReader-__delslice__">__delslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;del&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__eq__"><strong>__eq__</strong></a>(...)</dt><dd><tt>x.<a href="#MultiReader-__eq__">__eq__</a>(y)&nbsp;&lt;==&gt;&nbsp;x==y</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__ge__"><strong>__ge__</strong></a>(...)</dt><dd><tt>x.<a href="#MultiReader-__ge__">__ge__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;=y</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#MultiReader-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#MultiReader-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#MultiReader-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__gt__"><strong>__gt__</strong></a>(...)</dt><dd><tt>x.<a href="#MultiReader-__gt__">__gt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;y</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__iadd__"><strong>__iadd__</strong></a>(...)</dt><dd><tt>x.<a href="#MultiReader-__iadd__">__iadd__</a>(y)&nbsp;&lt;==&gt;&nbsp;x+=y</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__imul__"><strong>__imul__</strong></a>(...)</dt><dd><tt>x.<a href="#MultiReader-__imul__">__imul__</a>(y)&nbsp;&lt;==&gt;&nbsp;x*=y</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__iter__"><strong>__iter__</strong></a>(...)</dt><dd><tt>x.<a href="#MultiReader-__iter__">__iter__</a>()&nbsp;&lt;==&gt;&nbsp;iter(x)</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__le__"><strong>__le__</strong></a>(...)</dt><dd><tt>x.<a href="#MultiReader-__le__">__le__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;=y</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__len__"><strong>__len__</strong></a>(...)</dt><dd><tt>x.<a href="#MultiReader-__len__">__len__</a>()&nbsp;&lt;==&gt;&nbsp;len(x)</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__lt__"><strong>__lt__</strong></a>(...)</dt><dd><tt>x.<a href="#MultiReader-__lt__">__lt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;y</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__mul__"><strong>__mul__</strong></a>(...)</dt><dd><tt>x.<a href="#MultiReader-__mul__">__mul__</a>(n)&nbsp;&lt;==&gt;&nbsp;x*n</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__ne__"><strong>__ne__</strong></a>(...)</dt><dd><tt>x.<a href="#MultiReader-__ne__">__ne__</a>(y)&nbsp;&lt;==&gt;&nbsp;x!=y</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#MultiReader-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__reversed__"><strong>__reversed__</strong></a>(...)</dt><dd><tt>L.<a href="#MultiReader-__reversed__">__reversed__</a>()&nbsp;--&nbsp;return&nbsp;a&nbsp;reverse&nbsp;iterator&nbsp;over&nbsp;the&nbsp;<a href="__builtin__.html#list">list</a></tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__rmul__"><strong>__rmul__</strong></a>(...)</dt><dd><tt>x.<a href="#MultiReader-__rmul__">__rmul__</a>(n)&nbsp;&lt;==&gt;&nbsp;n*x</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__setitem__"><strong>__setitem__</strong></a>(...)</dt><dd><tt>x.<a href="#MultiReader-__setitem__">__setitem__</a>(i,&nbsp;y)&nbsp;&lt;==&gt;&nbsp;x[i]=y</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__setslice__"><strong>__setslice__</strong></a>(...)</dt><dd><tt>x.<a href="#MultiReader-__setslice__">__setslice__</a>(i,&nbsp;j,&nbsp;y)&nbsp;&lt;==&gt;&nbsp;x[i:j]=y<br>
+&nbsp;<br>
+Use&nbsp;&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-__sizeof__"><strong>__sizeof__</strong></a>(...)</dt><dd><tt>L.<a href="#MultiReader-__sizeof__">__sizeof__</a>()&nbsp;--&nbsp;size&nbsp;of&nbsp;L&nbsp;in&nbsp;memory,&nbsp;in&nbsp;bytes</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-append"><strong>append</strong></a>(...)</dt><dd><tt>L.<a href="#MultiReader-append">append</a>(object)&nbsp;--&nbsp;append&nbsp;object&nbsp;to&nbsp;end</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-count"><strong>count</strong></a>(...)</dt><dd><tt>L.<a href="#MultiReader-count">count</a>(value)&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;number&nbsp;of&nbsp;occurrences&nbsp;of&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-extend"><strong>extend</strong></a>(...)</dt><dd><tt>L.<a href="#MultiReader-extend">extend</a>(iterable)&nbsp;--&nbsp;extend&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;by&nbsp;appending&nbsp;elements&nbsp;from&nbsp;the&nbsp;iterable</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-index"><strong>index</strong></a>(...)</dt><dd><tt>L.<a href="#MultiReader-index">index</a>(value,&nbsp;[start,&nbsp;[stop]])&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;first&nbsp;index&nbsp;of&nbsp;value.<br>
+Raises&nbsp;ValueError&nbsp;if&nbsp;the&nbsp;value&nbsp;is&nbsp;not&nbsp;present.</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-insert"><strong>insert</strong></a>(...)</dt><dd><tt>L.<a href="#MultiReader-insert">insert</a>(index,&nbsp;object)&nbsp;--&nbsp;insert&nbsp;object&nbsp;before&nbsp;index</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-pop"><strong>pop</strong></a>(...)</dt><dd><tt>L.<a href="#MultiReader-pop">pop</a>([index])&nbsp;-&gt;&nbsp;item&nbsp;--&nbsp;remove&nbsp;and&nbsp;return&nbsp;item&nbsp;at&nbsp;index&nbsp;(default&nbsp;last).<br>
+Raises&nbsp;IndexError&nbsp;if&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;is&nbsp;empty&nbsp;or&nbsp;index&nbsp;is&nbsp;out&nbsp;of&nbsp;range.</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-remove"><strong>remove</strong></a>(...)</dt><dd><tt>L.<a href="#MultiReader-remove">remove</a>(value)&nbsp;--&nbsp;remove&nbsp;first&nbsp;occurrence&nbsp;of&nbsp;value.<br>
+Raises&nbsp;ValueError&nbsp;if&nbsp;the&nbsp;value&nbsp;is&nbsp;not&nbsp;present.</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-reverse"><strong>reverse</strong></a>(...)</dt><dd><tt>L.<a href="#MultiReader-reverse">reverse</a>()&nbsp;--&nbsp;reverse&nbsp;*IN&nbsp;PLACE*</tt></dd></dl>
+
+<dl><dt><a name="MultiReader-sort"><strong>sort</strong></a>(...)</dt><dd><tt>L.<a href="#MultiReader-sort">sort</a>(cmp=None,&nbsp;key=None,&nbsp;reverse=False)&nbsp;--&nbsp;stable&nbsp;sort&nbsp;*IN&nbsp;PLACE*;<br>
+cmp(x,&nbsp;y)&nbsp;-&gt;&nbsp;-1,&nbsp;0,&nbsp;1</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="__builtin__.html#list">__builtin__.list</a>:<br>
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object at 0x822be40&gt;<dd><tt>T.<a href="#MultiReader-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;object&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="VArrayMultiReader">class <strong>VArrayMultiReader</strong></a>(<a href="bbob_pproc.readalign.html#ArrayMultiReader">ArrayMultiReader</a>, <a href="bbob_pproc.readalign.html#VMultiReader">VMultiReader</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Wrapper&nbsp;class&nbsp;of&nbsp;ALIGNED&nbsp;data&nbsp;arrays&nbsp;to&nbsp;be&nbsp;aligned&nbsp;vertically.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="bbob_pproc.readalign.html#VArrayMultiReader">VArrayMultiReader</a></dd>
+<dd><a href="bbob_pproc.readalign.html#ArrayMultiReader">ArrayMultiReader</a></dd>
+<dd><a href="bbob_pproc.readalign.html#VMultiReader">VMultiReader</a></dd>
+<dd><a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a></dd>
+<dd><a href="__builtin__.html#list">__builtin__.list</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="VArrayMultiReader-__init__"><strong>__init__</strong></a>(self, data)</dt></dl>
+
+<hr>
+Methods inherited from <a href="bbob_pproc.readalign.html#ArrayMultiReader">ArrayMultiReader</a>:<br>
+<dl><dt><a name="VArrayMultiReader-currentLine"><strong>currentLine</strong></a>(self)</dt><dd><tt>Aggregates&nbsp;currentLines&nbsp;information.</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="bbob_pproc.readalign.html#ArrayMultiReader">ArrayMultiReader</a>:<br>
+<dl><dt><strong>idx</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="bbob_pproc.readalign.html#VMultiReader">VMultiReader</a>:<br>
+<dl><dt><a name="VArrayMultiReader-align"><strong>align</strong></a>(self, currentValue)</dt></dl>
+
+<dl><dt><a name="VArrayMultiReader-getInitialValue"><strong>getInitialValue</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="VArrayMultiReader-isFinished"><strong>isFinished</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="VArrayMultiReader-newCurrentValue"><strong>newCurrentValue</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="bbob_pproc.readalign.html#VMultiReader">VMultiReader</a>:<br>
+<dl><dt><strong>idxData</strong> = 2</dl>
+
+<hr>
+Methods inherited from <a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a>:<br>
+<dl><dt><a name="VArrayMultiReader-currentValues"><strong>currentValues</strong></a>(self)</dt><dd><tt>Gets&nbsp;the&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;of&nbsp;the&nbsp;current&nbsp;alignment&nbsp;values.</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-nextValues"><strong>nextValues</strong></a>(self)</dt><dd><tt>Gets&nbsp;the&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;of&nbsp;the&nbsp;next&nbsp;alignment&nbsp;values.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a>:<br>
+<dl><dt><strong>SingleReader</strong> = &lt;class bbob_pproc.readalign.SingleReader at 0xa68dd4c&gt;<dd><tt>Single&nbsp;data&nbsp;array&nbsp;reader&nbsp;class.</tt></dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#list">__builtin__.list</a>:<br>
+<dl><dt><a name="VArrayMultiReader-__add__"><strong>__add__</strong></a>(...)</dt><dd><tt>x.<a href="#VArrayMultiReader-__add__">__add__</a>(y)&nbsp;&lt;==&gt;&nbsp;x+y</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__contains__"><strong>__contains__</strong></a>(...)</dt><dd><tt>x.<a href="#VArrayMultiReader-__contains__">__contains__</a>(y)&nbsp;&lt;==&gt;&nbsp;y&nbsp;in&nbsp;x</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__delitem__"><strong>__delitem__</strong></a>(...)</dt><dd><tt>x.<a href="#VArrayMultiReader-__delitem__">__delitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;del&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__delslice__"><strong>__delslice__</strong></a>(...)</dt><dd><tt>x.<a href="#VArrayMultiReader-__delslice__">__delslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;del&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__eq__"><strong>__eq__</strong></a>(...)</dt><dd><tt>x.<a href="#VArrayMultiReader-__eq__">__eq__</a>(y)&nbsp;&lt;==&gt;&nbsp;x==y</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__ge__"><strong>__ge__</strong></a>(...)</dt><dd><tt>x.<a href="#VArrayMultiReader-__ge__">__ge__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;=y</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#VArrayMultiReader-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#VArrayMultiReader-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#VArrayMultiReader-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__gt__"><strong>__gt__</strong></a>(...)</dt><dd><tt>x.<a href="#VArrayMultiReader-__gt__">__gt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;y</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__iadd__"><strong>__iadd__</strong></a>(...)</dt><dd><tt>x.<a href="#VArrayMultiReader-__iadd__">__iadd__</a>(y)&nbsp;&lt;==&gt;&nbsp;x+=y</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__imul__"><strong>__imul__</strong></a>(...)</dt><dd><tt>x.<a href="#VArrayMultiReader-__imul__">__imul__</a>(y)&nbsp;&lt;==&gt;&nbsp;x*=y</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__iter__"><strong>__iter__</strong></a>(...)</dt><dd><tt>x.<a href="#VArrayMultiReader-__iter__">__iter__</a>()&nbsp;&lt;==&gt;&nbsp;iter(x)</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__le__"><strong>__le__</strong></a>(...)</dt><dd><tt>x.<a href="#VArrayMultiReader-__le__">__le__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;=y</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__len__"><strong>__len__</strong></a>(...)</dt><dd><tt>x.<a href="#VArrayMultiReader-__len__">__len__</a>()&nbsp;&lt;==&gt;&nbsp;len(x)</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__lt__"><strong>__lt__</strong></a>(...)</dt><dd><tt>x.<a href="#VArrayMultiReader-__lt__">__lt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;y</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__mul__"><strong>__mul__</strong></a>(...)</dt><dd><tt>x.<a href="#VArrayMultiReader-__mul__">__mul__</a>(n)&nbsp;&lt;==&gt;&nbsp;x*n</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__ne__"><strong>__ne__</strong></a>(...)</dt><dd><tt>x.<a href="#VArrayMultiReader-__ne__">__ne__</a>(y)&nbsp;&lt;==&gt;&nbsp;x!=y</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#VArrayMultiReader-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__reversed__"><strong>__reversed__</strong></a>(...)</dt><dd><tt>L.<a href="#VArrayMultiReader-__reversed__">__reversed__</a>()&nbsp;--&nbsp;return&nbsp;a&nbsp;reverse&nbsp;iterator&nbsp;over&nbsp;the&nbsp;<a href="__builtin__.html#list">list</a></tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__rmul__"><strong>__rmul__</strong></a>(...)</dt><dd><tt>x.<a href="#VArrayMultiReader-__rmul__">__rmul__</a>(n)&nbsp;&lt;==&gt;&nbsp;n*x</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__setitem__"><strong>__setitem__</strong></a>(...)</dt><dd><tt>x.<a href="#VArrayMultiReader-__setitem__">__setitem__</a>(i,&nbsp;y)&nbsp;&lt;==&gt;&nbsp;x[i]=y</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__setslice__"><strong>__setslice__</strong></a>(...)</dt><dd><tt>x.<a href="#VArrayMultiReader-__setslice__">__setslice__</a>(i,&nbsp;j,&nbsp;y)&nbsp;&lt;==&gt;&nbsp;x[i:j]=y<br>
+&nbsp;<br>
+Use&nbsp;&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-__sizeof__"><strong>__sizeof__</strong></a>(...)</dt><dd><tt>L.<a href="#VArrayMultiReader-__sizeof__">__sizeof__</a>()&nbsp;--&nbsp;size&nbsp;of&nbsp;L&nbsp;in&nbsp;memory,&nbsp;in&nbsp;bytes</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-append"><strong>append</strong></a>(...)</dt><dd><tt>L.<a href="#VArrayMultiReader-append">append</a>(object)&nbsp;--&nbsp;append&nbsp;object&nbsp;to&nbsp;end</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-count"><strong>count</strong></a>(...)</dt><dd><tt>L.<a href="#VArrayMultiReader-count">count</a>(value)&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;number&nbsp;of&nbsp;occurrences&nbsp;of&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-extend"><strong>extend</strong></a>(...)</dt><dd><tt>L.<a href="#VArrayMultiReader-extend">extend</a>(iterable)&nbsp;--&nbsp;extend&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;by&nbsp;appending&nbsp;elements&nbsp;from&nbsp;the&nbsp;iterable</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-index"><strong>index</strong></a>(...)</dt><dd><tt>L.<a href="#VArrayMultiReader-index">index</a>(value,&nbsp;[start,&nbsp;[stop]])&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;first&nbsp;index&nbsp;of&nbsp;value.<br>
+Raises&nbsp;ValueError&nbsp;if&nbsp;the&nbsp;value&nbsp;is&nbsp;not&nbsp;present.</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-insert"><strong>insert</strong></a>(...)</dt><dd><tt>L.<a href="#VArrayMultiReader-insert">insert</a>(index,&nbsp;object)&nbsp;--&nbsp;insert&nbsp;object&nbsp;before&nbsp;index</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-pop"><strong>pop</strong></a>(...)</dt><dd><tt>L.<a href="#VArrayMultiReader-pop">pop</a>([index])&nbsp;-&gt;&nbsp;item&nbsp;--&nbsp;remove&nbsp;and&nbsp;return&nbsp;item&nbsp;at&nbsp;index&nbsp;(default&nbsp;last).<br>
+Raises&nbsp;IndexError&nbsp;if&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;is&nbsp;empty&nbsp;or&nbsp;index&nbsp;is&nbsp;out&nbsp;of&nbsp;range.</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-remove"><strong>remove</strong></a>(...)</dt><dd><tt>L.<a href="#VArrayMultiReader-remove">remove</a>(value)&nbsp;--&nbsp;remove&nbsp;first&nbsp;occurrence&nbsp;of&nbsp;value.<br>
+Raises&nbsp;ValueError&nbsp;if&nbsp;the&nbsp;value&nbsp;is&nbsp;not&nbsp;present.</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-reverse"><strong>reverse</strong></a>(...)</dt><dd><tt>L.<a href="#VArrayMultiReader-reverse">reverse</a>()&nbsp;--&nbsp;reverse&nbsp;*IN&nbsp;PLACE*</tt></dd></dl>
+
+<dl><dt><a name="VArrayMultiReader-sort"><strong>sort</strong></a>(...)</dt><dd><tt>L.<a href="#VArrayMultiReader-sort">sort</a>(cmp=None,&nbsp;key=None,&nbsp;reverse=False)&nbsp;--&nbsp;stable&nbsp;sort&nbsp;*IN&nbsp;PLACE*;<br>
+cmp(x,&nbsp;y)&nbsp;-&gt;&nbsp;-1,&nbsp;0,&nbsp;1</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="__builtin__.html#list">__builtin__.list</a>:<br>
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object at 0x822be40&gt;<dd><tt>T.<a href="#VArrayMultiReader-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;object&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="VMultiReader">class <strong>VMultiReader</strong></a>(<a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>List&nbsp;of&nbsp;data&nbsp;arrays&nbsp;to&nbsp;be&nbsp;aligned&nbsp;vertically.<br>
+&nbsp;<br>
+Aligned&nbsp;vertically&nbsp;means,&nbsp;all&nbsp;number&nbsp;of&nbsp;function&nbsp;evaluations&nbsp;are&nbsp;the<br>
+closest&nbsp;from&nbsp;below&nbsp;or&nbsp;equal&nbsp;to&nbsp;the&nbsp;alignment&nbsp;number&nbsp;of&nbsp;function&nbsp;evaluations<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="bbob_pproc.readalign.html#VMultiReader">VMultiReader</a></dd>
+<dd><a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a></dd>
+<dd><a href="__builtin__.html#list">__builtin__.list</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="VMultiReader-__init__"><strong>__init__</strong></a>(self, data)</dt></dl>
+
+<dl><dt><a name="VMultiReader-align"><strong>align</strong></a>(self, currentValue)</dt></dl>
+
+<dl><dt><a name="VMultiReader-getInitialValue"><strong>getInitialValue</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="VMultiReader-isFinished"><strong>isFinished</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="VMultiReader-newCurrentValue"><strong>newCurrentValue</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>idx</strong> = 0</dl>
+
+<dl><dt><strong>idxData</strong> = 2</dl>
+
+<hr>
+Methods inherited from <a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a>:<br>
+<dl><dt><a name="VMultiReader-currentLine"><strong>currentLine</strong></a>(self)</dt><dd><tt>Aggregates&nbsp;currentLines&nbsp;information.</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-currentValues"><strong>currentValues</strong></a>(self)</dt><dd><tt>Gets&nbsp;the&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;of&nbsp;the&nbsp;current&nbsp;alignment&nbsp;values.</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-nextValues"><strong>nextValues</strong></a>(self)</dt><dd><tt>Gets&nbsp;the&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;of&nbsp;the&nbsp;next&nbsp;alignment&nbsp;values.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="bbob_pproc.readalign.html#MultiReader">MultiReader</a>:<br>
+<dl><dt><strong>SingleReader</strong> = &lt;class bbob_pproc.readalign.SingleReader at 0xa68dd4c&gt;<dd><tt>Single&nbsp;data&nbsp;array&nbsp;reader&nbsp;class.</tt></dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#list">__builtin__.list</a>:<br>
+<dl><dt><a name="VMultiReader-__add__"><strong>__add__</strong></a>(...)</dt><dd><tt>x.<a href="#VMultiReader-__add__">__add__</a>(y)&nbsp;&lt;==&gt;&nbsp;x+y</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__contains__"><strong>__contains__</strong></a>(...)</dt><dd><tt>x.<a href="#VMultiReader-__contains__">__contains__</a>(y)&nbsp;&lt;==&gt;&nbsp;y&nbsp;in&nbsp;x</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__delitem__"><strong>__delitem__</strong></a>(...)</dt><dd><tt>x.<a href="#VMultiReader-__delitem__">__delitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;del&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__delslice__"><strong>__delslice__</strong></a>(...)</dt><dd><tt>x.<a href="#VMultiReader-__delslice__">__delslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;del&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__eq__"><strong>__eq__</strong></a>(...)</dt><dd><tt>x.<a href="#VMultiReader-__eq__">__eq__</a>(y)&nbsp;&lt;==&gt;&nbsp;x==y</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__ge__"><strong>__ge__</strong></a>(...)</dt><dd><tt>x.<a href="#VMultiReader-__ge__">__ge__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;=y</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#VMultiReader-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#VMultiReader-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#VMultiReader-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__gt__"><strong>__gt__</strong></a>(...)</dt><dd><tt>x.<a href="#VMultiReader-__gt__">__gt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;y</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__iadd__"><strong>__iadd__</strong></a>(...)</dt><dd><tt>x.<a href="#VMultiReader-__iadd__">__iadd__</a>(y)&nbsp;&lt;==&gt;&nbsp;x+=y</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__imul__"><strong>__imul__</strong></a>(...)</dt><dd><tt>x.<a href="#VMultiReader-__imul__">__imul__</a>(y)&nbsp;&lt;==&gt;&nbsp;x*=y</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__iter__"><strong>__iter__</strong></a>(...)</dt><dd><tt>x.<a href="#VMultiReader-__iter__">__iter__</a>()&nbsp;&lt;==&gt;&nbsp;iter(x)</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__le__"><strong>__le__</strong></a>(...)</dt><dd><tt>x.<a href="#VMultiReader-__le__">__le__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;=y</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__len__"><strong>__len__</strong></a>(...)</dt><dd><tt>x.<a href="#VMultiReader-__len__">__len__</a>()&nbsp;&lt;==&gt;&nbsp;len(x)</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__lt__"><strong>__lt__</strong></a>(...)</dt><dd><tt>x.<a href="#VMultiReader-__lt__">__lt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;y</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__mul__"><strong>__mul__</strong></a>(...)</dt><dd><tt>x.<a href="#VMultiReader-__mul__">__mul__</a>(n)&nbsp;&lt;==&gt;&nbsp;x*n</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__ne__"><strong>__ne__</strong></a>(...)</dt><dd><tt>x.<a href="#VMultiReader-__ne__">__ne__</a>(y)&nbsp;&lt;==&gt;&nbsp;x!=y</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#VMultiReader-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__reversed__"><strong>__reversed__</strong></a>(...)</dt><dd><tt>L.<a href="#VMultiReader-__reversed__">__reversed__</a>()&nbsp;--&nbsp;return&nbsp;a&nbsp;reverse&nbsp;iterator&nbsp;over&nbsp;the&nbsp;<a href="__builtin__.html#list">list</a></tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__rmul__"><strong>__rmul__</strong></a>(...)</dt><dd><tt>x.<a href="#VMultiReader-__rmul__">__rmul__</a>(n)&nbsp;&lt;==&gt;&nbsp;n*x</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__setitem__"><strong>__setitem__</strong></a>(...)</dt><dd><tt>x.<a href="#VMultiReader-__setitem__">__setitem__</a>(i,&nbsp;y)&nbsp;&lt;==&gt;&nbsp;x[i]=y</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__setslice__"><strong>__setslice__</strong></a>(...)</dt><dd><tt>x.<a href="#VMultiReader-__setslice__">__setslice__</a>(i,&nbsp;j,&nbsp;y)&nbsp;&lt;==&gt;&nbsp;x[i:j]=y<br>
+&nbsp;<br>
+Use&nbsp;&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-__sizeof__"><strong>__sizeof__</strong></a>(...)</dt><dd><tt>L.<a href="#VMultiReader-__sizeof__">__sizeof__</a>()&nbsp;--&nbsp;size&nbsp;of&nbsp;L&nbsp;in&nbsp;memory,&nbsp;in&nbsp;bytes</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-append"><strong>append</strong></a>(...)</dt><dd><tt>L.<a href="#VMultiReader-append">append</a>(object)&nbsp;--&nbsp;append&nbsp;object&nbsp;to&nbsp;end</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-count"><strong>count</strong></a>(...)</dt><dd><tt>L.<a href="#VMultiReader-count">count</a>(value)&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;number&nbsp;of&nbsp;occurrences&nbsp;of&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-extend"><strong>extend</strong></a>(...)</dt><dd><tt>L.<a href="#VMultiReader-extend">extend</a>(iterable)&nbsp;--&nbsp;extend&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;by&nbsp;appending&nbsp;elements&nbsp;from&nbsp;the&nbsp;iterable</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-index"><strong>index</strong></a>(...)</dt><dd><tt>L.<a href="#VMultiReader-index">index</a>(value,&nbsp;[start,&nbsp;[stop]])&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;first&nbsp;index&nbsp;of&nbsp;value.<br>
+Raises&nbsp;ValueError&nbsp;if&nbsp;the&nbsp;value&nbsp;is&nbsp;not&nbsp;present.</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-insert"><strong>insert</strong></a>(...)</dt><dd><tt>L.<a href="#VMultiReader-insert">insert</a>(index,&nbsp;object)&nbsp;--&nbsp;insert&nbsp;object&nbsp;before&nbsp;index</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-pop"><strong>pop</strong></a>(...)</dt><dd><tt>L.<a href="#VMultiReader-pop">pop</a>([index])&nbsp;-&gt;&nbsp;item&nbsp;--&nbsp;remove&nbsp;and&nbsp;return&nbsp;item&nbsp;at&nbsp;index&nbsp;(default&nbsp;last).<br>
+Raises&nbsp;IndexError&nbsp;if&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;is&nbsp;empty&nbsp;or&nbsp;index&nbsp;is&nbsp;out&nbsp;of&nbsp;range.</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-remove"><strong>remove</strong></a>(...)</dt><dd><tt>L.<a href="#VMultiReader-remove">remove</a>(value)&nbsp;--&nbsp;remove&nbsp;first&nbsp;occurrence&nbsp;of&nbsp;value.<br>
+Raises&nbsp;ValueError&nbsp;if&nbsp;the&nbsp;value&nbsp;is&nbsp;not&nbsp;present.</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-reverse"><strong>reverse</strong></a>(...)</dt><dd><tt>L.<a href="#VMultiReader-reverse">reverse</a>()&nbsp;--&nbsp;reverse&nbsp;*IN&nbsp;PLACE*</tt></dd></dl>
+
+<dl><dt><a name="VMultiReader-sort"><strong>sort</strong></a>(...)</dt><dd><tt>L.<a href="#VMultiReader-sort">sort</a>(cmp=None,&nbsp;key=None,&nbsp;reverse=False)&nbsp;--&nbsp;stable&nbsp;sort&nbsp;*IN&nbsp;PLACE*;<br>
+cmp(x,&nbsp;y)&nbsp;-&gt;&nbsp;-1,&nbsp;0,&nbsp;1</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="__builtin__.html#list">__builtin__.list</a>:<br>
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object at 0x822be40&gt;<dd><tt>T.<a href="#VMultiReader-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;object&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-alignArrayData"><strong>alignArrayData</strong></a>(data)</dt><dd><tt>Aligns&nbsp;the&nbsp;data&nbsp;from&nbsp;a&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;of&nbsp;aligned&nbsp;arrays.<br>
+This&nbsp;method&nbsp;returns&nbsp;an&nbsp;array&nbsp;for&nbsp;which&nbsp;the&nbsp;alignment&nbsp;value&nbsp;is&nbsp;the&nbsp;first<br>
+column&nbsp;and&nbsp;the&nbsp;aligned&nbsp;values&nbsp;are&nbsp;in&nbsp;subsequent&nbsp;columns.</tt></dd></dl>
+ <dl><dt><a name="-alignData"><strong>alignData</strong></a>(data)</dt><dd><tt>Aligns&nbsp;the&nbsp;data&nbsp;from&nbsp;a&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;of&nbsp;data&nbsp;arrays.<br>
+This&nbsp;method&nbsp;returns&nbsp;an&nbsp;array&nbsp;for&nbsp;which&nbsp;the&nbsp;alignment&nbsp;value&nbsp;is&nbsp;the&nbsp;first<br>
+column&nbsp;and&nbsp;the&nbsp;aligned&nbsp;values&nbsp;are&nbsp;in&nbsp;subsequent&nbsp;columns.</tt></dd></dl>
+ <dl><dt><a name="-split"><strong>split</strong></a>(dataFiles, dim<font color="#909090">=None</font>)</dt><dd><tt>Split&nbsp;a&nbsp;<a href="__builtin__.html#list">list</a>&nbsp;of&nbsp;data&nbsp;files&nbsp;into&nbsp;arrays&nbsp;corresponding&nbsp;to&nbsp;data&nbsp;sets.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__package__</strong> = None<br>
+<strong>absolute_import</strong> = _Feature((2, 5, 0, 'alpha', 1), (2, 7, 0, 'alpha', 0), 16384)<br>
+<strong>idxEvals</strong> = 0<br>
+<strong>idxF</strong> = 2<br>
+<strong>nbPtsF</strong> = 5</td></tr></table>
+</body></html>
